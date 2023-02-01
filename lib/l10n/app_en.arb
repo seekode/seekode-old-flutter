@@ -1,6 +1,7 @@
 {
-  "language": "English",
   "@language": {
     "description": "The language of the application"
-  }
+  },
+  "key": "en",
+  "language": "English"
 }

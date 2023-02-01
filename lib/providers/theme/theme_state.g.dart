@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'theme.dart';
+part of 'theme_state.dart';
 
 // **************************************************************************
 // RiverpodGenerator
@@ -29,18 +29,18 @@ class _SystemHash {
   }
 }
 
-String _$ThemeHash() => r'd7c928f9dd20aa883bfc7952466f83be56700288';
+String _$ThemeStateHash() => r'1af4999061e0bf3fa5255fafbdeeb2d883da0814';
 
-/// See also [Theme].
-final themeProvider = AutoDisposeNotifierProvider<Theme, ThemeMode>(
-  Theme.new,
-  name: r'themeProvider',
+/// See also [ThemeState].
+final themeStateProvider = AutoDisposeNotifierProvider<ThemeState, ThemeMode>(
+  ThemeState.new,
+  name: r'themeStateProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$ThemeHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$ThemeStateHash,
 );
-typedef ThemeRef = AutoDisposeNotifierProviderRef<ThemeMode>;
+typedef ThemeStateRef = AutoDisposeNotifierProviderRef<ThemeMode>;
 
-abstract class _$Theme extends AutoDisposeNotifier<ThemeMode> {
+abstract class _$ThemeState extends AutoDisposeNotifier<ThemeMode> {
   @override
   ThemeMode build();
 }
