@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:seekode/app_themes.dart';
 
+import '../../app_themes.dart';
 import 'header_actions.dart';
 import 'header_background.dart';
 import 'header_content.dart';

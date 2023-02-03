@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../app_themes.dart';
 
@@ -50,7 +51,7 @@ class HeaderTitle extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 5),
                 child: Text(
-                  'développeur indépendant',
+                  AppLocalizations.of(context)!.headerSubtitle,
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         fontSize: responsiveValue(
                           context,

@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../app_themes.dart';
 
@@ -112,7 +113,7 @@ class HeaderContent extends StatelessWidget {
                               ),
                             ),
                             child: Text(
-                              '7 ans d\'éxperiences',
+                              AppLocalizations.of(context)!.headerExperiences,
                               style: width > 600
                                   ? width > 1024
                                       ? width <= 1300
@@ -134,7 +135,7 @@ class HeaderContent extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Développement & Formations',
+                            AppLocalizations.of(context)!.headerContent,
                             style: Theme.of(context)
                                 .textTheme
                                 .titleSmall!
