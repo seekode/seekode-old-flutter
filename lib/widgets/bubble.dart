@@ -19,26 +19,24 @@ class Bubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final brightness = Theme.of(context).brightness;
-    return Container(
+    return AnimatedContainer(
       width: width,
       height: height,
       margin: margin,
+      duration: const Duration(milliseconds: 300),
       decoration: BoxDecoration(
-        color: customColor,
-        gradient: customColor == null
-            ? LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  brightness == Brightness.dark
-                      ? const Color.fromARGB(255, 41, 38, 42)
-                      : Theme.of(context).colorScheme.background,
-                  brightness == Brightness.dark
-                      ? Theme.of(context).colorScheme.background
-                      : const Color.fromARGB(255, 220, 220, 220),
-                ],
-              )
-            : null,
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            brightness == Brightness.dark
+                ? const Color.fromARGB(255, 41, 38, 42)
+                : customColor ?? Theme.of(context).colorScheme.background,
+            brightness == Brightness.dark
+                ? customColor ?? Theme.of(context).colorScheme.background
+                : const Color.fromARGB(255, 220, 220, 220),
+          ],
+        ),
         boxShadow: [
           brightness != Brightness.dark
               ? const BoxShadow(

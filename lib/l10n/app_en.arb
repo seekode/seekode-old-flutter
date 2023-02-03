@@ -2,9 +2,12 @@
   "@language": {
     "description": "The language of the application"
   },
+  "development": "Development",
+  "discover": "Discover",
   "headerContent": "Development & Training",
   "headerExperiences": "7 years of experience",
   "headerSubtitle": "Independent developer",
   "key": "en",
-  "language": "English"
+  "language": "English",
+  "trainings": "Trainings"
 }

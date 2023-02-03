@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../providers/language/language.dart';
 import '../providers/theme/theme_state.dart';
+import '../widgets/activity/activity.dart';
 import '../widgets/bubble_button.dart';
 import '../widgets/header/header.dart';
 
@@ -147,6 +148,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: const [
                   Header(),
+                  Activity(),
                 ],
               ),
             ),

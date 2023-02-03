@@ -1,7 +1,10 @@
 {
+  "development": "Développement freelance",
+  "discover": "Découvrir",
   "headerContent": "Développement & Formations",
   "headerExperiences": "7 ans d'éxperiences",
   "headerSubtitle": "Développeur indépendant",
   "key": "fr",
-  "language": "Français"
+  "language": "Français",
+  "trainings": "Formations"
 }

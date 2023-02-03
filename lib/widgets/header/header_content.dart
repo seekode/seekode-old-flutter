@@ -17,12 +17,12 @@ class HeaderContent extends StatelessWidget {
       children: [
         SizedBox(
           height: width > 2500
-              ? 750.3
+              ? 754
               : width *
                   responsiveValue(
                     context,
                     phone: .55,
-                    desktop: .3,
+                    desktop: .31,
                   ),
         ),
         Center(
@@ -65,11 +65,11 @@ class HeaderContent extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: width > 2500
-                            ? 500.2
+                            ? 400
                             : width *
                                 responsiveValue(
                                   context,
-                                  desktop: .2,
+                                  desktop: .15,
                                 ),
                       ),
                       Image.asset(

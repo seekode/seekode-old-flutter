@@ -29,13 +29,10 @@ class _BubbleButtonState extends State<BubbleButton> {
   Widget build(BuildContext context) {
     return Padding(
       padding: widget.margin ?? const EdgeInsets.all(0),
-      child: InkWell(
-        mouseCursor: SystemMouseCursors.click,
-        onTap: () {},
-        onHover: (value) {
-          setState(() => hover = value);
-        },
-        borderRadius: const BorderRadius.all(Radius.circular(23)),
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        onEnter: (_) => setState(() => hover = true),
+        onExit: (_) => setState(() => hover = false),
         child: GestureDetector(
           onTap: widget.onTap,
           child: Bubble(
@@ -43,8 +40,8 @@ class _BubbleButtonState extends State<BubbleButton> {
             height: widget.height ?? 70,
             customColor: hover
                 ? Theme.of(context).brightness == Brightness.dark
-                    ? const Color.fromARGB(255, 41, 38, 42)
-                    : Theme.of(context).colorScheme.background
+                    ? const Color.fromARGB(255, 71, 67, 73)
+                    : const Color.fromARGB(255, 180, 180, 180)
                 : null,
             child: widget.child,
           ),
