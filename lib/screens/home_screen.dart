@@ -8,6 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../providers/language/language.dart';
 import '../providers/theme/theme_state.dart';
 import '../widgets/bubble_button.dart';
+import '../widgets/header/header.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -88,38 +89,43 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.transparent,
       barrierColor: Colors.transparent,
       elevation: 0,
-      builder: (context) => ClipRect(
-        child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
-          child: Container(
-            height: 300,
-            margin: const EdgeInsets.only(top: 19),
-            decoration: BoxDecoration(
+      builder: (context) => Container(
+        padding: const EdgeInsets.only(top: 10),
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(23),
+            topRight: Radius.circular(23),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: const Color.fromARGB(12, 0, 0, 0),
+              blurRadius: brightness == Brightness.light ? 10 : 0,
+              spreadRadius: brightness == Brightness.light ? 10 : 0,
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(23),
+            topRight: Radius.circular(23),
+          ),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+            child: Container(
+              height: 300,
               color: brightness == Brightness.light
                   ? const Color.fromARGB(100, 255, 255, 255)
-                  : const Color.fromARGB(99, 41, 38, 42),
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(23),
-                topRight: Radius.circular(23),
-              ),
-              boxShadow: const [
-                BoxShadow(
-                  color: Color.fromARGB(12, 0, 0, 0),
-                  blurRadius: 10,
-                  spreadRadius: 10,
-                  blurStyle: BlurStyle.normal,
-                ),
-              ],
-            ),
-            child: Consumer(
-              builder: (context, ref, _) => SingleChildScrollView(
-                child: Column(
-                  children: [
-                    const SizedBox(height: 30),
-                    item(ref, 'fr', 'Français'),
-                    item(ref, 'en', 'English'),
-                    const SizedBox(height: 30),
-                  ],
+                  : const Color.fromARGB(116, 41, 38, 42),
+              child: Consumer(
+                builder: (context, ref, _) => SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 30),
+                      item(ref, 'fr', 'Français'),
+                      item(ref, 'en', 'English'),
+                      const SizedBox(height: 30),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -134,9 +140,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          const SizedBox(
+          SizedBox(
             width: double.infinity,
             height: double.infinity,
+            child: SingleChildScrollView(
+              child: Column(
+                children: const [
+                  Header(),
+                ],
+              ),
+            ),
           ),
           // LanguageBtn and ThemeBtn
           Positioned(
@@ -144,9 +157,9 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 BubbleButton(
-                  onTap: () => showLanguageModal(context),
                   margin:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                  onTap: () => showLanguageModal(context),
                   child: Center(
                     child: ClipRRect(
                       borderRadius: const BorderRadius.all(Radius.circular(3)),
@@ -159,8 +172,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Consumer(
                   builder: (context, ref, _) => BubbleButton(
-                    onTap: () => ref.read(themeStateProvider.notifier).toogle(),
                     margin: const EdgeInsets.all(10),
+                    onTap: () => ref.read(themeStateProvider.notifier).toogle(),
                     child: _themeIcon(context, ref.watch(themeStateProvider)),
                   ),
                 ),

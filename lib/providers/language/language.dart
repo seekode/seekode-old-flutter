@@ -8,7 +8,7 @@ part 'language.g.dart';
 @riverpod
 class Language extends _$Language {
   @override
-  Locale? build() => Locale.fromSubtags(languageCode: 'fr');
+  Locale? build() => null;
 
   void set(String languageCode) {
     log(languageCode);

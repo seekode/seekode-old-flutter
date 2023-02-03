@@ -19,6 +19,7 @@ dependencies:
     sdk: flutter
   intl: ^0.17.0
   flutter_svg: ^1.1.6
+  url_launcher: ^6.1.8
 
 dev_dependencies:
   flutter_test:
@@ -39,6 +40,22 @@ flutter:
   assets:
     - assets/images/flags/fr.svg
     - assets/images/flags/en.svg
+    - assets/images/logo.svg
+    - assets/images/networks/instagram.svg
+    - assets/images/networks/tiktok.svg
+    - assets/images/networks/phone.svg
+    - assets/images/networks/mail.svg
+    - assets/images/networks/mail.svg
+    - assets/images/header.png
+    - assets/images/freelance.png
+    - assets/images/training.png
+    - assets/images/services.png
+    - assets/images/services/responsive.png
+    - assets/images/services/design.png
+    - assets/images/services/coding.png
+    - assets/images/services/tips.png
+    - assets/images/services/support.png
+    - assets/images/services/handshake.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -51,10 +68,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: SpaceAge
+      fonts:
+        - asset: assets/fonts/space_age.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
