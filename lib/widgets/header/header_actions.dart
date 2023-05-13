@@ -10,7 +10,7 @@ class HeaderActions extends StatelessWidget {
   Widget layout(double width, Widget child) => width > 1024
       ? Positioned(
           right: 0,
-          child: child,
+          child: SafeArea(child: child),
         )
       : Column(
           mainAxisSize: MainAxisSize.min,

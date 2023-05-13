@@ -56,6 +56,9 @@ flutter:
     - assets/images/services/tips.png
     - assets/images/services/support.png
     - assets/images/services/handshake.png
+    - assets/images/trainings/seekorp.svg
+    - assets/images/trainings/youtube.svg
+    - assets/images/trainings/discord.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

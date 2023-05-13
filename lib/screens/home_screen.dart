@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:seekode/widgets/trainings/trainings.dart';
 
 import '../providers/language/language.dart';
 import '../providers/theme/theme_state.dart';
@@ -146,14 +147,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          const SingleChildScrollView(
+          SingleChildScrollView(
             child: Column(
               children: [
-                Header(),
-                Activity(),
-                SizedBox(height: 80),
-                Services(),
-                SizedBox(height: 80),
+                const Header(),
+                const Activity(),
+                const SizedBox(height: 80),
+                const Services(),
+                const SizedBox(height: 80),
+                Trainings(),
+                const SizedBox(height: 800),
               ],
             ),
           ),
