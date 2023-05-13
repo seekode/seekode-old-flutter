@@ -19,6 +19,7 @@ class AppTheme {
         color: Color(0xFFF6F5F7),
       ),
       titleMedium: TextStyle(
+        fontSize: 45,
         color: Color(0xFF3C3C3C),
       ),
       titleSmall: TextStyle(
@@ -51,6 +52,7 @@ class AppTheme {
     ),
     textTheme: const TextTheme(
       titleLarge: TextStyle(fontFamily: 'SpaceAge'),
+      titleMedium: TextStyle(fontSize: 45),
       titleSmall: TextStyle(fontSize: 25),
     ),
   );

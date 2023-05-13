@@ -30,11 +30,11 @@ class Bubble extends StatelessWidget {
           end: Alignment.bottomRight,
           colors: [
             brightness == Brightness.dark
-                ? const Color.fromARGB(255, 41, 38, 42)
+                ? const Color.fromARGB(255, 39, 36, 40)
                 : customColor ?? Theme.of(context).colorScheme.background,
             brightness == Brightness.dark
                 ? customColor ?? Theme.of(context).colorScheme.background
-                : const Color.fromARGB(255, 220, 220, 220),
+                : const Color.fromARGB(255, 235, 235, 235),
           ],
         ),
         boxShadow: [

@@ -25,9 +25,6 @@ class ActivityItem extends StatelessWidget {
 
     return Column(
       children: [
-        const SizedBox(
-          height: 40,
-        ),
         if (screenWidth <= 720) ...[
           Text(
             _title,

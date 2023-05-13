@@ -25,15 +25,18 @@ class Activity extends StatelessWidget {
           SizedBox(
             height: responsiveValue(
               context,
-              phone: 0,
-              desktop: 100,
-              large: 140,
+              phone: 40,
+              desktop: 140,
+              large: 180,
             ),
           ),
           ActivityItem(
             AppLocalizations.of(context)!.development,
             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             'assets/images/freelance.png',
+          ),
+          SizedBox(
+            height: width > 720 ? 0 : 20,
           ),
           ActivityItem(
             AppLocalizations.of(context)!.trainings,

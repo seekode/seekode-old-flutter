@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -11,7 +9,6 @@ class Language extends _$Language {
   Locale? build() => null;
 
   void set(String languageCode) {
-    log(languageCode);
     state = Locale.fromSubtags(languageCode: languageCode);
   }
 }

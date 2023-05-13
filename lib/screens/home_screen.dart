@@ -10,11 +10,13 @@ import '../providers/theme/theme_state.dart';
 import '../widgets/activity/activity.dart';
 import '../widgets/bubble_button.dart';
 import '../widgets/header/header.dart';
+import '../widgets/services/services.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   final double? iconSize = 30;
+  // late ScrollController _scrollController;
 
   /// generate an icon to display in the theme button
   Widget _themeIcon(BuildContext context, ThemeMode themeMode) {
@@ -87,6 +89,9 @@ class HomeScreen extends StatelessWidget {
     final Brightness brightness = Theme.of(context).brightness;
     showModalBottomSheet(
       context: context,
+      constraints: const BoxConstraints(
+        minWidth: double.infinity,
+      ),
       backgroundColor: Colors.transparent,
       barrierColor: Colors.transparent,
       elevation: 0,
@@ -141,16 +146,15 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          SizedBox(
-            width: double.infinity,
-            height: double.infinity,
-            child: SingleChildScrollView(
-              child: Column(
-                children: const [
-                  Header(),
-                  Activity(),
-                ],
-              ),
+          const SingleChildScrollView(
+            child: Column(
+              children: [
+                Header(),
+                Activity(),
+                SizedBox(height: 80),
+                Services(),
+                SizedBox(height: 80),
+              ],
             ),
           ),
           // LanguageBtn and ThemeBtn

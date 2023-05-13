@@ -21,8 +21,8 @@ class Header extends StatelessWidget {
         desktop: width * .54,
         bigger: {2500: 1325.53},
       ),
-      child: Stack(
-        children: const [
+      child: const Stack(
+        children: [
           HeaderBackground(),
           HeaderActions(),
           HeaderTitle(),
