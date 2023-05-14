@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:seekode/widgets/bubble.dart';
+
+import '../bubble.dart';
 
 class BenefitItem extends StatelessWidget {
   const BenefitItem({

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:seekode/app_themes.dart';
-import 'package:seekode/widgets/about/review.dart';
+
+import '../../app_themes.dart';
+import 'review.dart';
 
 class Seekode extends StatelessWidget {
   const Seekode({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:seekode/widgets/about/seekode.dart';
-import 'package:seekode/widgets/about/tech.dart';
 
 import '../../app_themes.dart';
+import 'seekode.dart';
+import 'tech.dart';
 
 class About extends StatelessWidget {
   const About({super.key});

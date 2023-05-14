@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:seekode/widgets/trainings/training_item.dart';
 
 import '../../app_themes.dart';
+import 'training_item.dart';
 
 class Trainings extends StatelessWidget {
   Trainings({super.key});

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:seekode/app_themes.dart';
+
+import '../../app_themes.dart';
 
 class Review extends StatefulWidget {
   const Review({

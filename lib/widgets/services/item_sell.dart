@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:seekode/app_themes.dart';
+
+import '../../app_themes.dart';
 
 class ItemSell extends StatelessWidget {
   const ItemSell(

@@ -30,6 +30,19 @@ class HeaderActions extends StatelessWidget {
     final double btnWidth = width * .20;
 
     final bool isDesktop = width > 1024;
+    final bool isLarge = width > 1600;
+
+    final double? networkWidth = isLarge
+        ? 80
+        : isDesktop
+            ? null
+            : btnWidth;
+
+    final double? networkHeight = isLarge
+        ? 80
+        : btnWidth < 70
+            ? btnWidth
+            : null;
 
     return layout(
       width,
@@ -43,8 +56,8 @@ class HeaderActions extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 BubbleButton(
-                  width: isDesktop ? null : btnWidth,
-                  height: btnWidth < 70 ? btnWidth : null,
+                  width: networkWidth,
+                  height: networkHeight,
                   margin: const EdgeInsets.all(5),
                   onTap: () async {
                     final Uri url =
@@ -61,8 +74,8 @@ class HeaderActions extends StatelessWidget {
                   ),
                 ),
                 BubbleButton(
-                  width: isDesktop ? null : btnWidth,
-                  height: btnWidth < 70 ? btnWidth : null,
+                  width: networkWidth,
+                  height: networkHeight,
                   margin: const EdgeInsets.all(5),
                   onTap: () async {
                     final Uri url =
@@ -84,8 +97,8 @@ class HeaderActions extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 BubbleButton(
-                  width: isDesktop ? null : btnWidth,
-                  height: btnWidth < 70 ? btnWidth : null,
+                  width: networkWidth,
+                  height: networkHeight,
                   margin: const EdgeInsets.all(5),
                   onTap: () async {
                     final Uri url = Uri.parse('tel:+33621240684');
@@ -101,8 +114,8 @@ class HeaderActions extends StatelessWidget {
                   ),
                 ),
                 BubbleButton(
-                  width: isDesktop ? null : btnWidth,
-                  height: btnWidth < 70 ? btnWidth : null,
+                  width: networkWidth,
+                  height: networkHeight,
                   margin: const EdgeInsets.all(5),
                   onTap: () async {
                     final Uri url = Uri.parse('mailto:nicolas18.ew@gmail.com');

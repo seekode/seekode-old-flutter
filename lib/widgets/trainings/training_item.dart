@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:seekode/app_themes.dart';
-import 'package:seekode/widgets/bubble.dart';
-import 'package:seekode/widgets/gradient_text_button.dart';
+
+import '../../app_themes.dart';
+import '../bubble.dart';
+import '../gradient_text_button.dart';
 
 class TrainingItem extends StatelessWidget {
   const TrainingItem({

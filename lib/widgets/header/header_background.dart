@@ -8,7 +8,7 @@ class HeaderBackground extends StatelessWidget {
 
   double? _squareSize(BuildContext context, String type) {
     final Orientation orientation = MediaQuery.of(context).orientation;
-    
+
     switch (type) {
       case 'width':
         return responsiveValue(

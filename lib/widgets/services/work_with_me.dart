@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:seekode/app_themes.dart';
-import 'package:seekode/widgets/services/benefit_item.dart';
+
+import '../../app_themes.dart';
+import 'benefit_item.dart';
 
 class WorkWithMe extends StatelessWidget {
   WorkWithMe({super.key});
