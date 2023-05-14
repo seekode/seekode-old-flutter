@@ -59,6 +59,30 @@ flutter:
     - assets/images/trainings/seekorp.svg
     - assets/images/trainings/youtube.svg
     - assets/images/trainings/discord.svg
+    - assets/images/about/seekode.jpg
+    - assets/images/about/microsoft_teams.svg
+    - assets/images/about/responsive.svg
+    - assets/images/about/html.svg
+    - assets/images/about/figma.svg
+    - assets/images/about/trello.svg
+    - assets/images/about/git.svg
+    - assets/images/about/github.svg
+    - assets/images/about/sass.svg
+    - assets/images/about/css.svg
+    - assets/images/about/filezilla.svg
+    - assets/images/about/nuxtjs.svg
+    - assets/images/about/vuejs.svg
+    - assets/images/about/javascript.svg
+    - assets/images/about/vscode.svg
+    - assets/images/about/android_studio.svg
+    - assets/images/about/npm.svg
+    - assets/images/about/nodejs.svg
+    - assets/images/about/php.svg
+    - assets/images/about/dart.svg
+    - assets/images/about/mongodb.svg
+    - assets/images/about/firebase.svg
+    - assets/images/about/mysql.svg
+    - assets/images/about/flutter.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

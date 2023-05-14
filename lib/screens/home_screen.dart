@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:seekode/widgets/about/about.dart';
 import 'package:seekode/widgets/trainings/trainings.dart';
 
 import '../providers/language/language.dart';
@@ -156,6 +157,8 @@ class HomeScreen extends StatelessWidget {
                 const Services(),
                 const SizedBox(height: 80),
                 Trainings(),
+                const SizedBox(height: 80),
+                const About(),
                 const SizedBox(height: 800),
               ],
             ),

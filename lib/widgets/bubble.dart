@@ -6,14 +6,20 @@ class Bubble extends StatelessWidget {
     this.width,
     this.height,
     this.margin,
+    this.padding,
     this.customColor,
+    this.borderRadius,
+    this.lightShadow,
     this.child,
   });
 
   final double? width;
   final double? height;
   final EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? padding;
   final Color? customColor;
+  final BorderRadiusGeometry? borderRadius;
+  final BoxShadow? lightShadow;
   final Widget? child;
 
   @override
@@ -23,6 +29,7 @@ class Bubble extends StatelessWidget {
       width: width,
       height: height,
       margin: margin,
+      padding: padding,
       duration: const Duration(milliseconds: 300),
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -30,7 +37,7 @@ class Bubble extends StatelessWidget {
           end: Alignment.bottomRight,
           colors: [
             brightness == Brightness.dark
-                ? const Color.fromARGB(255, 39, 36, 40)
+                ? const Color.fromARGB(255, 45, 45, 45)
                 : customColor ?? Theme.of(context).colorScheme.background,
             brightness == Brightness.dark
                 ? customColor ?? Theme.of(context).colorScheme.background
@@ -39,18 +46,20 @@ class Bubble extends StatelessWidget {
         ),
         boxShadow: [
           brightness != Brightness.dark
-              ? const BoxShadow(
-                  color: Colors.black54,
-                  blurRadius: 50,
-                  spreadRadius: -10,
-                )
+              ? lightShadow ??
+                  const BoxShadow(
+                    color: Colors.black54,
+                    blurRadius: 50,
+                    spreadRadius: -10,
+                  )
               : const BoxShadow(
                   color: Colors.black87,
                   blurRadius: 20,
                   spreadRadius: -10,
                 ),
         ],
-        borderRadius: const BorderRadius.all(Radius.circular(23)),
+        borderRadius:
+            borderRadius ?? const BorderRadius.all(Radius.circular(23)),
       ),
       child: child,
     );
