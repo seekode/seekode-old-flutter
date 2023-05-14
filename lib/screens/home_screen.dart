@@ -12,6 +12,7 @@ import '../widgets/about/about.dart';
 import '../widgets/activity/activity.dart';
 import '../widgets/background_square.dart';
 import '../widgets/bubble_button.dart';
+import '../widgets/contact/contact.dart';
 import '../widgets/header/header.dart';
 import '../widgets/services/services.dart';
 import '../widgets/trainings/trainings.dart';
@@ -235,10 +236,10 @@ class HomeScreen extends StatelessWidget {
                     phone: 2000,
                     tablet: 2400,
                     bigger: {
-                      2800: 4000,
-                      2200: 3700,
-                      2000: 3400,
-                      1800: 3200,
+                      2800: 4400,
+                      2200: 4000,
+                      2000: 3700,
+                      1800: 3400,
                       1500: 3000,
                       1300: 2800,
                       1150: 2600,
@@ -314,11 +315,20 @@ class HomeScreen extends StatelessWidget {
                     const Activity(),
                     const SizedBox(height: 80),
                     const Services(),
-                    const SizedBox(height: 80),
+                    const SizedBox(height: 100),
                     Trainings(),
-                    const SizedBox(height: 80),
+                    const SizedBox(height: 100),
                     const About(),
-                    const SizedBox(height: 800),
+                    SizedBox(
+                        height: responsiveValue(
+                      context,
+                      phone: 100,
+                      tablet: 150,
+                      desktop: 150,
+                      large: 200,
+                    )),
+                    const Contact(),
+                    const SizedBox(height: 200),
                   ],
                 ),
               ],

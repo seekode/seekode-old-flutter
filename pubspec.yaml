@@ -46,6 +46,8 @@ flutter:
     - assets/images/networks/phone.svg
     - assets/images/networks/mail.svg
     - assets/images/networks/mail.svg
+    - assets/images/networks/qrcode.svg
+    - assets/images/networks/phone.png
     - assets/images/header.png
     - assets/images/freelance.png
     - assets/images/training.png

@@ -30,7 +30,7 @@ class Services extends StatelessWidget {
               context,
               phone: 10,
               tablet: 20,
-              desktop: 40,
+              desktop: 60,
             ),
           ),
           SizedBox(
