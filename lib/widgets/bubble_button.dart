@@ -34,7 +34,13 @@ class _BubbleButtonState extends State<BubbleButton> {
         onEnter: (_) => setState(() => hover = true),
         onExit: (_) => setState(() => hover = false),
         child: GestureDetector(
-          onTap: widget.onTap,
+          onTap: () {
+            if (widget.onTap != null) widget.onTap!();
+            setState(() => hover = true);
+            Future.delayed(const Duration(milliseconds: 500), () {
+              setState(() => hover = false);
+            });
+          },
           child: Bubble(
             width: widget.width ?? 70,
             height: widget.height ?? 70,

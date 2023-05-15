@@ -40,17 +40,22 @@ class Contact extends StatelessWidget {
               height: qrcodeSize,
               child: Stack(
                 children: [
-                  SvgPicture.asset(
-                    'assets/images/networks/qrcode.svg',
+                  Image.asset(
+                    'assets/images/networks/qrcode.png',
                     width: double.infinity,
                   ),
                   Positioned(
-                    bottom: qrcodeSize * 0.04,
+                    bottom: 0,
                     width: qrcodeSize,
-                    child: Center(
-                      child: Text(
-                        'seekode',
-                        style: theme.titleLarge,
+                    child: SizedBox(
+                      height: qrcodeSize * 0.176,
+                      child: Center(
+                        child: Text(
+                          'seekode',
+                          style: theme.titleLarge!.copyWith(
+                            fontSize: qrcodeSize * 0.1,
+                          ),
+                        ),
                       ),
                     ),
                   ),

@@ -30,7 +30,7 @@ class Bubble extends StatelessWidget {
       height: height,
       margin: margin,
       padding: padding,
-      duration: const Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 200),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
