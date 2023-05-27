@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../app_themes.dart';
-import '../bubble.dart';
+import '../../classes/hero_dialog_route.dart';
+import '../bubble_button.dart';
+import 'tech_modal.dart';
 
 class Tech extends StatelessWidget {
   const Tech({
@@ -13,47 +16,141 @@ class Tech extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
 
-    final List<String?> items = [
+    bool localNameFr = AppLocalizations.of(context)!.localeName == 'fr';
+
+    final List<TechItem?> items = [
       null,
       null,
       null,
       null,
-      'microsoft_teams',
+      TechItem(
+        'microsoft_teams',
+        AppLocalizations.of(context)!.techTeams,
+        'https://www.microsoft.com/${localNameFr ? 'fr-fr' : 'en-us'}/microsoft-teams/group-chat-software/',
+      ),
       null,
       null,
       null,
-      'responsive',
-      'html',
-      'figma',
-      'trello',
-      'git',
-      'github',
+      TechItem(
+        'responsive',
+        AppLocalizations.of(context)!.techResponsive,
+        'https://developer.mozilla.org/${localNameFr ? 'fr' : 'en-US'}/docs/Learn/CSS/CSS_layout/Responsive_Design',
+      ),
+      TechItem(
+        'html',
+        AppLocalizations.of(context)!.techHtml,
+        'https://developer.mozilla.org/${localNameFr ? 'fr' : 'en-US'}/docs/Web/HTML',
+      ),
+      TechItem(
+        'figma',
+        AppLocalizations.of(context)!.techFigma,
+        'https://www.figma.com/${localNameFr ? 'fr/' : ''}',
+      ),
+      TechItem(
+        'trello',
+        AppLocalizations.of(context)!.techTrello,
+        'https://trello.com/${localNameFr ? 'fr' : ''}',
+      ),
+      TechItem(
+        'git',
+        AppLocalizations.of(context)!.techGit,
+        'https://git-scm.com/',
+      ),
+      TechItem(
+        'github',
+        AppLocalizations.of(context)!.techGithub,
+        'https://github.com/',
+      ),
       null,
-      'sass',
-      'css',
+      TechItem(
+        'sass',
+        AppLocalizations.of(context)!.techSass,
+        'https://sass-lang.com/',
+      ),
+      TechItem(
+        'css',
+        AppLocalizations.of(context)!.techCss,
+        'https://developer.mozilla.org/${localNameFr ? 'fr' : 'en-US'}/docs/Learn/Getting_started_with_the_web/CSS_basics',
+      ),
       null,
       null,
-      'filezilla',
+      TechItem(
+        'filezilla',
+        AppLocalizations.of(context)!.techFilezilla,
+        'https://filezilla-project.org/',
+      ),
       null,
-      'nuxtjs',
-      'vuejs',
-      'javascript',
+      TechItem(
+        'nuxtjs',
+        AppLocalizations.of(context)!.techNuxtjs,
+        'https://v2.nuxt.com/${localNameFr ? 'fr' : ''}',
+      ),
+      TechItem(
+        'vuejs',
+        AppLocalizations.of(context)!.techVuejs,
+        'https://${localNameFr ? 'fr.' : ''}vuejs.org/',
+      ),
+      TechItem(
+        'javascript',
+        AppLocalizations.of(context)!.techJavascript,
+        'https://developer.mozilla.org/${localNameFr ? 'fr' : 'en-US'}/docs/Learn/JavaScript',
+      ),
       null,
       null,
-      'vscode',
-      'android_studio',
+      TechItem(
+        'vscode',
+        AppLocalizations.of(context)!.techVsc,
+        'https://code.visualstudio.com/',
+      ),
+      TechItem(
+        'android_studio',
+        AppLocalizations.of(context)!.techAndroidStudio,
+        'https://developer.android.com/',
+      ),
       null,
-      size.width < 384 ? 'nuxtjs' : 'npm',
-      'nodejs',
-      'php',
-      'dart',
+      TechItem(
+        size.width < 384 ? 'nuxtjs' : 'npm',
+        size.width < 384
+            ? AppLocalizations.of(context)!.techNuxtjs
+            : AppLocalizations.of(context)!.techNpm,
+        size.width < 384
+            ? 'https://v2.nuxt.com/${localNameFr ? 'fr' : ''}'
+            : 'https://www.npmjs.com/',
+      ),
+      TechItem(
+        'nodejs',
+        AppLocalizations.of(context)!.techNodejs,
+        'https://nodejs.org/${localNameFr ? 'fr' : 'en'}/about',
+      ),
+      TechItem(
+        'php',
+        AppLocalizations.of(context)!.techPhp,
+        'https://www.php.net/',
+      ),
+      TechItem(
+        'dart',
+        AppLocalizations.of(context)!.techDart,
+        'https://dart.dev/',
+      ),
       null,
       null,
       null,
       null,
-      'mongodb',
-      'firebase',
-      'mysql',
+      TechItem(
+        'mongodb',
+        AppLocalizations.of(context)!.techMongoDB,
+        'https://www.mongodb.com/${localNameFr ? 'fr-fr/' : ''}',
+      ),
+      TechItem(
+        'firebase',
+        AppLocalizations.of(context)!.techFirebase,
+        'https://firebase.google.com/',
+      ),
+      TechItem(
+        'mysql',
+        AppLocalizations.of(context)!.techMySql,
+        'https://www.mysql.com/',
+      ),
     ];
 
     if (size.width < 384) {
@@ -119,19 +216,36 @@ class Tech extends StatelessWidget {
               children: items
                   .map(
                     (item) => item != null
-                        ? Bubble(
-                            width: bubbleSize,
-                            height: bubbleSize,
-                            padding: EdgeInsets.all(bubbleSize * .25),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(borderRadius)),
-                            lightShadow: const BoxShadow(
-                              color: Colors.black54,
-                              blurRadius: 20,
-                              spreadRadius: -10,
-                            ),
-                            child: SvgPicture.asset(
-                              'assets/images/about/$item.svg',
+                        ? Hero(
+                            tag: item.tag,
+                            child: BubbleButton(
+                              width: bubbleSize,
+                              height: bubbleSize,
+                              padding: EdgeInsets.all(bubbleSize * .25),
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(borderRadius)),
+                              lightShadow: const BoxShadow(
+                                color: Colors.black54,
+                                blurRadius: 20,
+                                spreadRadius: -10,
+                              ),
+                              onTap: () {
+                                Navigator.of(context).push(
+                                  HeroDialogRoute(
+                                    builder: (context) => TechModal(
+                                      item: item.tag,
+                                      text: item.text,
+                                      doc: item.doc,
+                                      initialSize: bubbleSize,
+                                      initialPadding: bubbleSize * .25,
+                                      initialBorderRadius: borderRadius,
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: SvgPicture.asset(
+                                'assets/images/about/${item.tag}.svg',
+                              ),
                             ),
                           )
                         : SizedBox(
@@ -152,18 +266,36 @@ class Tech extends StatelessWidget {
                     width: bubbleSize,
                     height: bubbleSize,
                   ),
-                Bubble(
-                  width: flutterSize,
-                  height: flutterSize,
-                  padding: EdgeInsets.all(flutterSize * .2),
-                  borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
-                  lightShadow: const BoxShadow(
-                    color: Colors.black54,
-                    blurRadius: 12,
-                    spreadRadius: -7,
-                  ),
-                  child: SvgPicture.asset(
-                    'assets/images/about/flutter.svg',
+                Hero(
+                  tag: 'flutter',
+                  child: BubbleButton(
+                    width: flutterSize,
+                    height: flutterSize,
+                    padding: EdgeInsets.all(flutterSize * .2),
+                    borderRadius:
+                        BorderRadius.all(Radius.circular(borderRadius)),
+                    lightShadow: const BoxShadow(
+                      color: Colors.black54,
+                      blurRadius: 12,
+                      spreadRadius: -7,
+                    ),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        HeroDialogRoute(
+                          builder: (context) => TechModal(
+                            item: 'flutter',
+                            text: AppLocalizations.of(context)!.techFlutter,
+                            doc: 'https://flutter.dev/',
+                            initialSize: flutterSize,
+                            initialPadding: flutterSize * .2,
+                            initialBorderRadius: borderRadius,
+                          ),
+                        ),
+                      );
+                    },
+                    child: SvgPicture.asset(
+                      'assets/images/about/flutter.svg',
+                    ),
                   ),
                 ),
               ],
@@ -173,4 +305,11 @@ class Tech extends StatelessWidget {
       ),
     );
   }
+}
+
+class TechItem {
+  TechItem(this.tag, this.text, this.doc);
+  String tag;
+  String text;
+  String doc;
 }

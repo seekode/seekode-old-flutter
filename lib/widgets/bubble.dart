@@ -5,6 +5,7 @@ class Bubble extends StatelessWidget {
     super.key,
     this.width,
     this.height,
+    this.constraints,
     this.margin,
     this.padding,
     this.customColor,
@@ -15,6 +16,7 @@ class Bubble extends StatelessWidget {
 
   final double? width;
   final double? height;
+  final BoxConstraints? constraints;
   final EdgeInsetsGeometry? margin;
   final EdgeInsetsGeometry? padding;
   final Color? customColor;
@@ -27,6 +29,7 @@ class Bubble extends StatelessWidget {
     final brightness = Theme.of(context).brightness;
     return AnimatedContainer(
       width: width,
+      constraints: constraints,
       height: height,
       margin: margin,
       padding: padding,

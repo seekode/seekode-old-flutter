@@ -15,6 +15,7 @@ import '../widgets/bubble_button.dart';
 import '../widgets/contact/contact.dart';
 import '../widgets/header/header.dart';
 import '../widgets/services/services.dart';
+import '../widgets/toast.dart';
 import '../widgets/trainings/trainings.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -148,193 +149,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
-
-    final double firstSquareTop = responsiveValue(
-      context,
-      phone: 700,
-      tablet: 800,
-      bigger: {
-        2500: 1600,
-        2000: 1400,
-        1600: 1300,
-        1500: 1200,
-        1400: 1130,
-        1200: 1000,
-        1024: 800,
-        900: 1040,
-        700: 900,
-      },
-    );
-    final double firstSquareLeft = width < 2000 ? width - 20 : width - 200;
-
     return Scaffold(
       body: Stack(
         children: [
-          SingleChildScrollView(
-            child: Stack(
-              children: [
-                BackgroundSquare(
-                  top: firstSquareTop +
-                      responsiveValue(
-                        context,
-                        phone: 30,
-                        desktop: 40,
-                        large: 50,
-                      ),
-                  left: firstSquareLeft -
-                      responsiveValue(
-                        context,
-                        phone: 10,
-                        desktop: 15,
-                        large: 20,
-                      ),
-                ),
-                BackgroundSquare(
-                  top: firstSquareTop,
-                  left: firstSquareLeft,
-                  gradient: true,
-                  gradientBegin: Alignment.topLeft,
-                  gradientEnd: Alignment.bottomLeft,
-                ),
-                BackgroundSquare(
-                  size: 1000,
-                  top: responsiveValue(
-                    context,
-                    phone: 880,
-                    bigger: {
-                      2200: 2700,
-                      2000: 2400,
-                      1800: 2200,
-                      1500: 2000,
-                      1200: 1800,
-                      1024: 1450,
-                      900: 1800,
-                      800: 1600,
-                      700: 1400,
-                      600: 1300,
-                      500: 1000,
-                    },
-                    // tablet: 1600,
-                  ),
-                  right: responsiveValue(
-                    context,
-                    phone: 400,
-                    bigger: {
-                      2000: width - 250,
-                      1800: width - 200,
-                      700: width - 100,
-                      500: width,
-                      400: 450,
-                    },
-                  ),
-                ),
-                BackgroundSquare(
-                  size: 1500,
-                  top: responsiveValue(
-                    context,
-                    phone: 2000,
-                    tablet: 2400,
-                    bigger: {
-                      2800: 4400,
-                      2200: 4000,
-                      2000: 3700,
-                      1800: 3400,
-                      1500: 3000,
-                      1300: 2800,
-                      1150: 2600,
-                      1024: 2400,
-                      900: 3000,
-                      700: 2650,
-                    },
-                  ),
-                  left: responsiveValue(
-                    context,
-                    phone: width,
-                    tablet: width - 100,
-                    bigger: {
-                      2500: width - 400,
-                      2200: width - 300,
-                      700: width - 200,
-                    },
-                  ),
-                ),
-                if (width < 900)
-                  BackgroundSquare(
-                    size: 1000,
-                    top: responsiveValue(
-                      context,
-                      phone: 3200,
-                      tablet: 4000,
-                      bigger: {
-                        800: 4000,
-                        700: 3800,
-                      },
-                    ),
-                    right: responsiveValue(
-                      context,
-                      phone: width - 50,
-                      bigger: {
-                        700: width - 100,
-                        500: width - 200,
-                        350: width - 100,
-                      },
-                    ),
-                  ),
-                if (width < 900)
-                  BackgroundSquare(
-                    size: 1000,
-                    top: responsiveValue(
-                      context,
-                      phone: 5050,
-                      bigger: {
-                        800: 5300,
-                        700: 5200,
-                        600: 5550,
-                        550: 5000,
-                        500: 4950,
-                        450: 4900,
-                        350: 4950,
-                      },
-                    ),
-                    left: responsiveValue(
-                      context,
-                      phone: width - 20,
-                      bigger: {
-                        800: width - 180,
-                        700: width - 150,
-                        600: width - 70,
-                        550: width - 50,
-                        500: width - 30,
-                      },
-                    ),
-                  ),
-                Column(
-                  children: [
-                    const Header(),
-                    const Activity(),
-                    const SizedBox(height: 80),
-                    const Services(),
-                    const SizedBox(height: 100),
-                    Trainings(),
-                    const SizedBox(height: 100),
-                    const About(),
-                    SizedBox(
-                        height: responsiveValue(
-                      context,
-                      phone: 100,
-                      tablet: 150,
-                      desktop: 150,
-                      large: 200,
-                    )),
-                    const Contact(),
-                    const SizedBox(height: 200),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          // LanguageBtn and ThemeBtn
+          Content(),
           Positioned(
             bottom: 0,
             child: Column(
@@ -362,6 +180,212 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          const Toast(),
+        ],
+      ),
+    );
+  }
+}
+
+class Content extends StatelessWidget {
+  Content({super.key});
+
+  final GlobalKey _servicesKey = GlobalKey();
+  final GlobalKey _trainingsKey = GlobalKey();
+
+  void _scrollToWidget(GlobalKey key) {
+    Scrollable.ensureVisible(
+      key.currentContext!,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.fastOutSlowIn,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+
+    final double firstSquareTop = responsiveValue(
+      context,
+      phone: 700,
+      tablet: 800,
+      bigger: {
+        2500: 1600,
+        2000: 1400,
+        1600: 1300,
+        1500: 1200,
+        1400: 1130,
+        1200: 1000,
+        1024: 800,
+        900: 1040,
+        700: 900,
+      },
+    );
+    final double firstSquareLeft = width < 2000 ? width - 20 : width - 200;
+
+    return SingleChildScrollView(
+      child: Stack(
+        children: [
+          BackgroundSquare(
+            top: firstSquareTop +
+                responsiveValue(
+                  context,
+                  phone: 30,
+                  desktop: 40,
+                  large: 50,
+                ),
+            left: firstSquareLeft -
+                responsiveValue(
+                  context,
+                  phone: 10,
+                  desktop: 15,
+                  large: 20,
+                ),
+          ),
+          BackgroundSquare(
+            top: firstSquareTop,
+            left: firstSquareLeft,
+            gradient: true,
+            gradientBegin: Alignment.topLeft,
+            gradientEnd: Alignment.bottomLeft,
+          ),
+          BackgroundSquare(
+            size: 1000,
+            top: responsiveValue(
+              context,
+              phone: 880,
+              bigger: {
+                2200: 2700,
+                2000: 2400,
+                1800: 2200,
+                1500: 2000,
+                1200: 1800,
+                1024: 1450,
+                900: 1800,
+                800: 1600,
+                700: 1400,
+                600: 1300,
+                500: 1000,
+              },
+              // tablet: 1600,
+            ),
+            right: responsiveValue(
+              context,
+              phone: 400,
+              bigger: {
+                2000: width - 250,
+                1800: width - 200,
+                700: width - 100,
+                500: width,
+                400: 450,
+              },
+            ),
+          ),
+          BackgroundSquare(
+            size: 1500,
+            top: responsiveValue(
+              context,
+              phone: 2000,
+              tablet: 2400,
+              bigger: {
+                2800: 4400,
+                2200: 4000,
+                2000: 3700,
+                1800: 3400,
+                1500: 3000,
+                1300: 2800,
+                1150: 2600,
+                1024: 2400,
+                900: 3000,
+                700: 2650,
+              },
+            ),
+            left: responsiveValue(
+              context,
+              phone: width,
+              tablet: width - 100,
+              bigger: {
+                2500: width - 400,
+                2200: width - 300,
+                700: width - 200,
+              },
+            ),
+          ),
+          if (width < 900)
+            BackgroundSquare(
+              size: 1000,
+              top: responsiveValue(
+                context,
+                phone: 3200,
+                tablet: 4000,
+                bigger: {
+                  800: 4000,
+                  700: 3800,
+                },
+              ),
+              right: responsiveValue(
+                context,
+                phone: width - 50,
+                bigger: {
+                  700: width - 100,
+                  500: width - 200,
+                  350: width - 100,
+                },
+              ),
+            ),
+          if (width < 900)
+            BackgroundSquare(
+              size: 1000,
+              top: responsiveValue(
+                context,
+                phone: 5050,
+                bigger: {
+                  800: 5300,
+                  700: 5200,
+                  600: 5550,
+                  550: 5000,
+                  500: 4950,
+                  450: 4900,
+                  350: 4950,
+                },
+              ),
+              left: responsiveValue(
+                context,
+                phone: width - 20,
+                bigger: {
+                  800: width - 180,
+                  700: width - 150,
+                  600: width - 70,
+                  550: width - 50,
+                  500: width - 30,
+                },
+              ),
+            ),
+          Column(
+            children: [
+              const Header(),
+              Activity(
+                onTapDev: () => _scrollToWidget(_servicesKey),
+                onTapTrainings: () => _scrollToWidget(_servicesKey),
+              ),
+              const SizedBox(height: 80),
+              Container(key: _servicesKey, child: const Services()),
+              const SizedBox(height: 100),
+              Container(key: _trainingsKey, child: const Trainings()),
+              const SizedBox(height: 100),
+              const About(),
+              SizedBox(
+                  height: responsiveValue(
+                context,
+                phone: 100,
+                tablet: 150,
+                desktop: 150,
+                large: 200,
+              )),
+              const Contact(),
+              const SizedBox(height: 200),
+            ],
           ),
         ],
       ),

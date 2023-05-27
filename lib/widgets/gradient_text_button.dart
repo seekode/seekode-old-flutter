@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class GradientTextButton extends StatefulWidget {
-  const GradientTextButton(this._text, {super.key});
+  const GradientTextButton(this._text, {super.key, required this.onTap});
 
   final String _text;
+  final Function()? onTap;
 
   @override
   State<GradientTextButton> createState() => _GradientTextButtonState();
@@ -60,8 +61,15 @@ class _GradientTextButtonState extends State<GradientTextButton>
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        if (widget.onTap != null) widget.onTap!();
+        _controller.forward();
+        Future.delayed(const Duration(milliseconds: 500), () {
+          _controller.reverse();
+        });
+      },
       onHover: (value) => value ? _controller.forward() : _controller.reverse(),
+      enableFeedback: false,
       splashFactory: NoSplash.splashFactory,
       focusColor: Colors.transparent,
       highlightColor: Colors.transparent,
@@ -92,7 +100,7 @@ class _GradientTextButtonState extends State<GradientTextButton>
                 ),
                 SizedBox(height: 30, width: _animationSpace.value),
                 const Padding(
-                  padding: EdgeInsets.only(top: 4),
+                  padding: EdgeInsets.only(top: 2),
                   child: Icon(
                     Icons.arrow_forward_ios_rounded,
                     size: 15,

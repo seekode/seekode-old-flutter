@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../app_themes.dart';
 import '../bubble.dart';
@@ -21,21 +22,6 @@ class Sell extends StatefulWidget {
 class _SellState extends State<Sell> with SingleTickerProviderStateMixin {
   int activeItem = 0;
   int? previousItem;
-
-  final List<Map<String, dynamic>> _items = [
-    {
-      'title': 'Coaching & formations',
-      'icon': Icons.school_rounded,
-    },
-    {
-      'title': 'Gestion de projets',
-      'icon': Icons.account_tree_rounded,
-    },
-    {
-      'title': 'Développement',
-      'icon': Icons.data_object_rounded,
-    },
-  ];
 
   late AnimationController _controller;
   late Animation<Color?> _animationOne;
@@ -97,6 +83,21 @@ class _SellState extends State<Sell> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, dynamic>> items = [
+      {
+        'title': AppLocalizations.of(context)!.servicesCoachSubtitle,
+        'icon': Icons.school_rounded,
+      },
+      {
+        'title': AppLocalizations.of(context)!.servicesProjectSubtitle,
+        'icon': Icons.account_tree_rounded,
+      },
+      {
+        'title': AppLocalizations.of(context)!.development,
+        'icon': Icons.data_object_rounded,
+      },
+    ];
+
     final double height = responsiveValue(
       context,
       phone: 120,
@@ -178,10 +179,10 @@ class _SellState extends State<Sell> with SingleTickerProviderStateMixin {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      for (var i = 0; i < _items.length; i++)
+                      for (var i = 0; i < items.length; i++)
                         ItemSell(
-                          _items[i]['title'],
-                          _items[i]['icon'],
+                          items[i]['title'],
+                          items[i]['icon'],
                           i == activeItem,
                           width: itemWidth,
                           height: height,

@@ -1,29 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../app_themes.dart';
+import '../../providers/toast/toast_state.dart';
 import '../bubble.dart';
 import '../gradient_text_button.dart';
 
-class TrainingItem extends StatelessWidget {
+class TrainingItem extends ConsumerWidget {
   const TrainingItem({
     super.key,
     required this.title,
     required this.description,
+    required this.link,
     required this.logo,
     required this.color,
   });
 
   final String title;
   final String description;
+  final String link;
   final String logo;
   final String color;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final ThemeData theme = Theme.of(context);
-    // final size = MediaQuery.of(context).size;
 
     final double width = responsiveValue(
       context,
@@ -80,6 +84,18 @@ class TrainingItem extends StatelessWidget {
                   padding: const EdgeInsets.all(20),
                   child: GradientTextButton(
                     AppLocalizations.of(context)!.discover,
+                    onTap: () async {
+                      if (link.isNotEmpty) {
+                        final Uri url = Uri.parse(link);
+                        if (await canLaunchUrl(url)) {
+                          await launchUrl(url);
+                        }
+                      } else {
+                        ref
+                            .read(toastStateProvider.notifier)
+                            .set('Fonctionnalité en développement');
+                      }
+                    },
                   ),
                 ),
               ],

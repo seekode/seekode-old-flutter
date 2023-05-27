@@ -57,12 +57,15 @@ class _ReviewState extends State<Review> {
 
     return Row(
       children: [
-        GestureDetector(
-          onTap: () => _pageController.previousPage(
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeInOut,
+        MouseRegion(
+          cursor: SystemMouseCursors.click,
+          child: GestureDetector(
+            onTap: () => _pageController.previousPage(
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+            ),
+            child: const Icon(Icons.arrow_back_ios),
           ),
-          child: const Icon(Icons.arrow_back_ios),
         ),
         isExpanded(
           width < 1250,
@@ -85,12 +88,15 @@ class _ReviewState extends State<Review> {
             ),
           ),
         ),
-        GestureDetector(
-          onTap: () => _pageController.nextPage(
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeInOut,
+        MouseRegion(
+          cursor: SystemMouseCursors.click,
+          child: GestureDetector(
+            onTap: () => _pageController.nextPage(
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+            ),
+            child: const Icon(Icons.arrow_forward_ios),
           ),
-          child: const Icon(Icons.arrow_forward_ios),
         ),
       ],
     );

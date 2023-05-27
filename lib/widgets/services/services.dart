@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../app_themes.dart';
 import 'sell.dart';
@@ -21,7 +22,7 @@ class Services extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: Text(
-              'Mes services',
+              AppLocalizations.of(context)!.servicesTitle,
               style: theme.textTheme.titleMedium,
             ),
           ),
@@ -53,11 +54,11 @@ class Services extends StatelessWidget {
             ),
           ),
           Text(
-            'Travailler avec moi c\'est...',
+            AppLocalizations.of(context)!.servicesWorkWithMeTitle,
             style: theme.textTheme.titleSmall,
           ),
           const SizedBox(height: 30),
-          WorkWithMe(),
+          const WorkWithMe(),
         ],
       ),
     );

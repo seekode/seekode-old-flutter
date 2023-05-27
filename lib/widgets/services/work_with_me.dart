@@ -1,46 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../app_themes.dart';
 import 'benefit_item.dart';
 
 class WorkWithMe extends StatelessWidget {
-  WorkWithMe({super.key});
-
-  final List<Map<String, String>> _itemLeft = [
-    {
-      'title': 'Une application qui s\'adapte !',
-      'description': 'ascascascascsascascas ascasdsa asdasd asd asd asd',
-      'img': 'responsive',
-    },
-    {
-      'title': 'Un design cohérent !',
-      'description': 'ascascascascsascascas ascasdsa asdasd asd asd asd',
-      'img': 'design',
-    },
-    {
-      'title': 'Un travail serieux et de qualité !',
-      'description': 'ascascascascsascascas ascasdsa asdasd asd asd asd',
-      'img': 'coding',
-    },
-  ];
-
-  final List<Map<String, String>> _itemRight = [
-    {
-      'title': 'Des conseils avisées !',
-      'description': 'ascascascascsascascas ascasdsa asdasd asd asd asd',
-      'img': 'tips',
-    },
-    {
-      'title': 'Etre satisfait du résultat !',
-      'description': 'ascascascascsascascas ascasdsa asdasd asd asd asd',
-      'img': 'support',
-    },
-    {
-      'title': 'Une satisfaction garantie !',
-      'description': 'ascascascascsascascas ascasdsa asdasd asd asd asd',
-      'img': 'handshake',
-    },
-  ];
+  const WorkWithMe({super.key});
 
   Widget _expanded(screeWidth, {required Widget child}) =>
       screeWidth > 1024 ? Expanded(child: child) : child;
@@ -48,6 +13,42 @@ class WorkWithMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
+
+    final List<Map<String, String>> itemLeft = [
+      {
+        'title': AppLocalizations.of(context)!.servicesItem1Title,
+        'description': AppLocalizations.of(context)!.servicesItem1text,
+        'img': 'responsive',
+      },
+      {
+        'title': AppLocalizations.of(context)!.servicesItem2Title,
+        'description': AppLocalizations.of(context)!.servicesItem2Text,
+        'img': 'design',
+      },
+      {
+        'title': AppLocalizations.of(context)!.servicesItem3Title,
+        'description': AppLocalizations.of(context)!.servicesItem3Text,
+        'img': 'coding',
+      },
+    ];
+
+    final List<Map<String, String>> itemRight = [
+      {
+        'title': AppLocalizations.of(context)!.servicesItem4Title,
+        'description': AppLocalizations.of(context)!.servicesItem4Text,
+        'img': 'tips',
+      },
+      {
+        'title': AppLocalizations.of(context)!.servicesItem5Title,
+        'description': AppLocalizations.of(context)!.servicesItem5Text,
+        'img': 'support',
+      },
+      {
+        'title': AppLocalizations.of(context)!.servicesItem6Title,
+        'description': AppLocalizations.of(context)!.servicesItem6Text,
+        'img': 'handshake',
+      },
+    ];
 
     return Row(
       children: [
@@ -71,7 +72,7 @@ class WorkWithMe extends StatelessWidget {
                 width,
                 child: Column(
                   children: [
-                    for (final item in _itemLeft)
+                    for (final item in itemLeft)
                       BenefitItem(
                         title: item['title']!,
                         description: item['description']!,
@@ -98,7 +99,7 @@ class WorkWithMe extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    for (final item in _itemRight)
+                    for (final item in itemRight)
                       BenefitItem(
                         title: item['title']!,
                         description: item['description']!,

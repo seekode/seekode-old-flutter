@@ -11,11 +11,13 @@ class ActivityItem extends StatelessWidget {
     this._img, {
     super.key,
     this.reverse,
+    this.onTap,
   });
 
   final String _title;
   final String _description;
   final String _img;
+  final Function()? onTap;
   final bool? reverse;
 
   @override
@@ -54,7 +56,10 @@ class ActivityItem extends StatelessWidget {
                     ],
                     Text(_description, softWrap: true),
                     const SizedBox(height: 15),
-                    GradientTextButton(AppLocalizations.of(context)!.discover),
+                    GradientTextButton(
+                      AppLocalizations.of(context)!.discover,
+                      onTap: onTap,
+                    ),
                   ],
                 ),
               ),

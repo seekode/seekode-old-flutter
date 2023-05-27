@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:seekode/app_themes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../app_themes.dart';
 import '../bubble_button.dart';
 
 class Contact extends StatelessWidget {

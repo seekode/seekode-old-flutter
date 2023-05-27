@@ -1,39 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../app_themes.dart';
 import 'training_item.dart';
 
 class Trainings extends StatelessWidget {
-  Trainings({super.key});
-
-  final List<Map<String, String>> _items = [
-    {
-      'title': 'SeeLearn',
-      'description':
-          'SeeLearn est ma plate-forme de formation accessible aux débutant permettant l’apprentissage de la programmation sur diverses technologies.',
-      'logo': 'seekorp',
-      'color': 'ffcdc0d7',
-    },
-    {
-      'title': 'YouTube',
-      'description':
-          'SeeLearn est ma plate-forme de formation accessible aux débutant permettant l’apprentissage de la programmation sur diverses technologies.',
-      'logo': 'youtube',
-      'color': 'fff5a9a9',
-    },
-    {
-      'title': 'Discord',
-      'description':
-          'SeeLearn est ma plate-forme de formation accessible aux débutant permettant l’apprentissage de la programmation sur diverses technologies.',
-      'logo': 'discord',
-      'color': 'ffcccffc',
-    },
-  ];
+  const Trainings({super.key});
 
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     final Size size = MediaQuery.of(context).size;
+
+    final List<Map<String, String>> items = [
+      {
+        'title': 'SeeLearn',
+        'description': AppLocalizations.of(context)!.trainingsSeeLearn,
+        'link': '',
+        'logo': 'seekorp',
+        'color': 'ffcdc0d7',
+      },
+      {
+        'title': 'YouTube',
+        'description': AppLocalizations.of(context)!.trainingsYouTube,
+        'link': 'https://www.youtube.com/@_seekode',
+        'logo': 'youtube',
+        'color': 'fff5a9a9',
+      },
+      {
+        'title': 'Discord',
+        'description': AppLocalizations.of(context)!.trainingsDiscord,
+        'link': 'https://discord.gg/g494as8mxM',
+        'logo': 'discord',
+        'color': 'ffcccffc',
+      },
+    ];
 
     return SizedBox(
       width: responsiveValue(
@@ -61,11 +62,12 @@ class Trainings extends StatelessWidget {
           Flex(
             direction: size.width > 900 ? Axis.horizontal : Axis.vertical,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: _items
+            children: items
                 .map(
                   (item) => TrainingItem(
                     title: item['title']!,
                     description: item['description']!,
+                    link: item['link']!,
                     logo: item['logo']!,
                     color: item['color']!,
                   ),

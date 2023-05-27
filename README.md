@@ -1,6 +1,6 @@
 # seekode
 
-A new Flutter project.
+Seekode personal website.
 
 ## Getting Started
 
