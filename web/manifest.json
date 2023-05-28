@@ -1,6 +1,6 @@
 {
-    "name": "seekode",
-    "short_name": "seekode",
+    "name": "Seekode",
+    "short_name": "Seekode",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#hexcode",
