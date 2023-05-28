@@ -1,0 +1,45 @@
+@font-face {
+  font-family: space_age;
+  src: url(../../../links/assets/fonts/space_age.ttf);
+}
+
+
+body {
+	min-height: 100vh;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(45deg, #734594 0%, #aa3f90 60%, #df3a8c 100%);
+}
+
+h1, h2 {
+	margin-top: 5rem;
+  text-align: center;
+	margin-bottom: 8rem;
+}
+
+h1 {
+	font-size: 5rem;
+	font-family: space_age;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.section-title {
+  margin-top: 3rem;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.section-content {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  margin-top: 10rem;
+  text-align: center;
+  font-size: 12px;
+}

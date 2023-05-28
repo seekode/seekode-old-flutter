@@ -31,6 +31,7 @@ dev_dependencies:
   build_runner: ^2.3.3
   riverpod_generator: ^2.2.1
   freezed: ^2.3.2
+  msix: ^3.13.2
 
 
 flutter:
@@ -112,3 +113,15 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+
+msix_config:
+  display_name: Seekode
+  publisher_display_name: Seekode
+  publisher: CN=D2C02657-1CA5-49BF-9604-A1068CC6D327
+  identity_name: 4946Seekode.Seekode
+  msix_version: 1.0.0.0
+  logo_path: D:\Development\projects\seekode\assets\icon\desktop_icon.png
+  languages: en-us, fr-fr
+  certificate_path: D:\Development\projects\seekode\SEEKODE.pfx
+  certificate_password: "*7O0L9&!1nJsE3cW"
