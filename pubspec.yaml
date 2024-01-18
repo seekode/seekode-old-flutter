@@ -118,8 +118,8 @@ flutter:
 msix_config:
   display_name: Seekode
   publisher_display_name: Seekode
-  publisher: CN=D2C02657-1CA5-49BF-9604-A1068CC6D327
-  identity_name: 4946Seekode.Seekode
+  publisher: Seekode
+  identity_name: Seekode
   msix_version: 1.0.0.0
   logo_path: D:\Development\projects\seekode\assets\icon\desktop_icon.png
   languages: en-us, fr-fr
