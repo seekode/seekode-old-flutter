@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../app_themes.dart';
 
@@ -12,27 +13,6 @@ class Review extends StatefulWidget {
 }
 
 class _ReviewState extends State<Review> {
-  final List<ReviewData> _review = [
-    ReviewData(
-      author: 'Emmanuelle CUMINAL',
-      text:
-          'J\'ai fait appel à Nicolas pour améliorer mon site internet et il a été très efficace et professionnel. Il est réactif et donne de nombreux conseils, je recommande !',
-      note: 5,
-    ),
-    ReviewData(
-      author: 'Avenue De la Communication',
-      text:
-          'Excellent développeur, Nicolas fait preuve d\'un grand professionnalisme, vous pouvez lui confier toutes sortes de missions en toute confiance, il saura vous répondre à vos attentes rapidement.',
-      note: 5,
-    ),
-    ReviewData(
-      author: 'DUMAS Pascal',
-      text:
-          'Nicolas a toujours été d une aide rapide et efficace. Je le recommande vivement pour vos projets et suivis.',
-      note: 5,
-    ),
-  ];
-
   late final PageController _pageController;
 
   @override
@@ -54,6 +34,24 @@ class _ReviewState extends State<Review> {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
+
+    final List<ReviewData> review = [
+      ReviewData(
+        author: 'Emmanuelle CUMINAL',
+        text: AppLocalizations.of(context)!.reviewEmmanuelleCuminal,
+        note: 5,
+      ),
+      ReviewData(
+        author: 'Avenue De la Communication',
+        text: AppLocalizations.of(context)!.reviewAvenueDelaCommunication,
+        note: 5,
+      ),
+      ReviewData(
+        author: 'DUMAS Pascal',
+        text: AppLocalizations.of(context)!.reviewDumasPascal,
+        note: 5,
+      ),
+    ];
 
     return Row(
       children: [
@@ -77,12 +75,12 @@ class _ReviewState extends State<Review> {
               controller: _pageController,
               physics: const ClampingScrollPhysics(),
               itemBuilder: (_, index) {
-                final i = index % _review.length;
+                final i = index % review.length;
 
                 return ReviewItem(
-                  author: _review[i].author,
-                  text: _review[i].text,
-                  note: _review[i].note,
+                  author: review[i].author,
+                  text: review[i].text,
+                  note: review[i].note,
                 );
               },
             ),

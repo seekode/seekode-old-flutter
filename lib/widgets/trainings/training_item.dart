@@ -93,7 +93,7 @@ class TrainingItem extends ConsumerWidget {
                       } else {
                         ref
                             .read(toastStateProvider.notifier)
-                            .set('Fonctionnalité en développement');
+                            .set(AppLocalizations.of(context)!.featureInDev);
                       }
                     },
                   ),

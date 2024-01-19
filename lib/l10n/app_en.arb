@@ -3,16 +3,21 @@
     "description": "The language of the application"
   },
   "aboutInfo": "I am an independent developer passionate about coding for over 7 years. I have acquired a solid expertise in several programming languages, and I have developed a passion for the creation of applications, website, software, and other programs of all kinds. \nUntil more than 3 years now I have also developed a particular interest for the activity of trainer that I take great pleasure in exercising.",
+  "aboutMe": "About me",
   "activityDevelopment": "Take advantage of my experience to help you in the management and development of your project. \nWebsite, mobile application, software, or training, I offer high quality services that will satisfy you.",
   "activityTrainings": "Discover the profession of developer with my tailor-made training adapted to your level and your objectives.\nWhether you want to create websites, develop mobile applications or design software, I am here to support you in your project.",
   "back": "back",
   "development": "Development",
   "discover": "Discover",
+  "featureInDev": "Feature in development",
   "headerContent": "Development & Training",
   "headerExperiences": "7 years of experience",
   "headerSubtitle": "Independent developer",
   "key": "en",
   "language": "English",
+  "reviewAvenueDelaCommunication": "An excellent developer, Nicolas is highly professional, and you can entrust him with all kinds of assignments with complete confidence. He'll be able to meet your expectations quickly.",
+  "reviewDumasPascal": "Nicolas was always quick and efficient. I highly recommend him for your projects and follow-ups.",
+  "reviewEmmanuelleCuminal": "I contacted Nicolas to improve my website and he was very efficient and professional. He is reactive and gives a lot of advice, I recommend!",
   "servicesCoachSubtitle": "Coaching & Training",
   "servicesItem1Title": "An application that adapts!",
   "servicesItem1text": "A design that adapts to all screen sizes for a wider target",
@@ -56,5 +61,6 @@
   "trainingsDiscord": "A discord server is available so you can contact me quickly for projects or a need for help in development",
   "trainingsSeeLearn": "SeeLearn is my beginner-accessible training platform for learning programming on various technologies.",
   "trainingsYouTube": "I offer, on my Youtube channel free training allowing developers of all levels to train on various technologies.",
-  "website": "website"
+  "website": "website",
+  "welcome": "Welcome to seekode App !"
 }

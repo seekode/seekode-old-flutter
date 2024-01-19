@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -14,6 +15,7 @@ class Toast extends ConsumerStatefulWidget {
 }
 
 class _ToastState extends ConsumerState<Toast> {
+  bool firstLoading = true;
   bool firstContainerAnimate = false;
   bool secondContainerAnimate = false;
   String? text;
@@ -25,23 +27,26 @@ class _ToastState extends ConsumerState<Toast> {
     final double width = MediaQuery.of(context).size.width;
 
     final String? toast = ref.watch(toastStateProvider);
+    if ((toast != null || firstLoading) && text == null) {
+      text = firstLoading ? AppLocalizations.of(context)!.welcome : toast;
 
-    if (toast != null && text == null) {
-      text = toast;
       //open
-      setState(() => firstContainerAnimate = true);
+      Future.delayed(Duration(milliseconds: firstLoading ? 1500 : 0), () {
+        if (firstLoading) firstLoading = false;
+        setState(() => firstContainerAnimate = true);
 
-      Future.delayed(const Duration(seconds: 1), () {
-        setState(() => secondContainerAnimate = true);
+        Future.delayed(const Duration(seconds: 1), () {
+          setState(() => secondContainerAnimate = true);
 
-        // close
-        Future.delayed(const Duration(seconds: 3), () {
-          setState(() => secondContainerAnimate = false);
+          // close
+          Future.delayed(const Duration(seconds: 3), () {
+            setState(() => secondContainerAnimate = false);
 
-          Future.delayed(const Duration(seconds: 1), () {
-            setState(() => firstContainerAnimate = false);
-            setState(() => text = null);
-            ref.read(toastStateProvider.notifier).set(null);
+            Future.delayed(const Duration(seconds: 1), () {
+              setState(() => firstContainerAnimate = false);
+              setState(() => text = null);
+              ref.read(toastStateProvider.notifier).set(null);
+            });
           });
         });
       });
@@ -96,7 +101,10 @@ class _ToastState extends ConsumerState<Toast> {
                       SizedBox(
                         width: 225,
                         child: Center(
-                          child: Text(toast ?? ''),
+                          child: Text(
+                            text ?? '',
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
                       ),
                     ],

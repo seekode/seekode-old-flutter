@@ -1,15 +1,20 @@
 {
   "aboutInfo": "Je suis un développeur indépendant passionné par le code depuis plus de 7 ans. J'ai acquis une solide expertise dans plusieurs langages de programmation, et j'ai développé une passion pour la création d'applications, site web, logiciel, et autres programmes en tous genres. \nDepuis maintenant plus de 3 ans j'ai également développer un interet particulier pour l'activité de formateur que je prend beaucoup de plaisir à exercer.",
+  "aboutMe": "A propos",
   "activityDevelopment": "Profitez de mon expérience pour vous aider dans la gestion et le développement de votre projet. \nSite web, application mobile, logiciel, ou encore formation, je propose des services de haute qualité qui seront vous satisfaire.",
   "activityTrainings": "Découvrez le métier de développeur avec mes formations sur mesures adaptées à votre niveau et à vos objectifs.\nQue vous souhaitiez créer des sites web, développer des applications mobiles ou concevoir des logiciels, je suis là pour vous accompagner dans votre projet.",
   "back": "retour",
   "development": "Développement freelance",
   "discover": "Découvrir",
+  "featureInDev": "Fonctionnalité en développement",
   "headerContent": "Développement & Formations",
   "headerExperiences": "7 ans d'éxperiences",
   "headerSubtitle": "Développeur indépendant",
   "key": "fr",
   "language": "Français",
+  "reviewAvenueDelaCommunication": "Excellent développeur, Nicolas fait preuve d'un grand professionnalisme, vous pouvez lui confier toutes sortes de missions en toute confiance, il saura vous répondre à vos attentes rapidement.",
+  "reviewDumasPascal": "Nicolas a toujours été d une aide rapide et efficace. Je le recommande vivement pour vos projets et suivis.",
+  "reviewEmmanuelleCuminal": "J'ai fait appel à Nicolas pour améliorer mon site internet et il a été très efficace et professionnel. Il est réactif et donne de nombreux conseils, je recommande !",
   "servicesCoachSubtitle": "Coaching & Formations",
   "servicesItem1Title": "Une application qui s'adapte!",
   "servicesItem1text": "Un design qui s'adapte à toutes les tailles d'écrans pour une cible plus large",
@@ -53,5 +58,6 @@
   "trainingsDiscord": "Un serveur discord est mis à disposition afin de pouvoir me contacter rapidement pour des projets ou un besoin d'aide dans le développement.",
   "trainingsSeeLearn": "SeeLearn est ma plate-forme de formation accessible aux débutant permettant l’apprentissage de la programmation sur diverses technologies.",
   "trainingsYouTube": "Je propose, sur ma chaine Youtube des formations gratuite permettant à des développeurs de tout niveau de se former sur diverses technologies. ",
-  "website": "site web"
+  "website": "site web",
+  "welcome": "Bienvenue sur l'application seekode !"
 }

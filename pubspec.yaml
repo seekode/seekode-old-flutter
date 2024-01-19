@@ -11,16 +11,15 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
-  flutter_riverpod: ^2.1.3
-  riverpod_annotation: ^2.1.1
-  freezed_annotation: ^2.2.0
+  cupertino_icons: ^1.0.6
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
   flutter_localizations:
     sdk: flutter
   intl: ^0.18.1
-  flutter_svg: ^2.0.5
-  url_launcher: ^6.1.8
-  window_manager: ^0.3.4
+  flutter_svg: ^2.0.9
+  url_launcher: ^6.2.3
+  window_manager: ^0.3.7
 
 dev_dependencies:
   flutter_test:
@@ -28,10 +27,8 @@ dev_dependencies:
 
   flutter_lints: ^3.0.1
   flutter_launcher_icons: ^0.13.1
-  build_runner: ^2.3.3
-  riverpod_generator: ^2.2.1
-  freezed: ^2.3.2
-  msix: ^3.13.2
+  build_runner: ^2.4.8
+  riverpod_generator: ^2.3.9
 
 
 flutter:
@@ -48,6 +45,8 @@ flutter:
     - assets/images/networks/phone.svg
     - assets/images/networks/mail.svg
     - assets/images/networks/mail.svg
+    - assets/images/networks/playstore.svg
+    - assets/images/networks/windows.svg
     - assets/images/networks/qrcode.png
     - assets/images/networks/phone.png
     - assets/images/header.png
@@ -113,15 +112,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
-
-msix_config:
-  display_name: Seekode
-  publisher_display_name: Seekode
-  publisher: Seekode
-  identity_name: Seekode
-  msix_version: 1.0.0.0
-  logo_path: D:\Development\projects\seekode\assets\icon\desktop_icon.png
-  languages: en-us, fr-fr
-  certificate_path: D:\Development\projects\seekode\SEEKODE.pfx
-  certificate_password: "*7O0L9&!1nJsE3cW"

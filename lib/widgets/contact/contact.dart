@@ -35,6 +35,52 @@ class Contact extends StatelessWidget {
       children: [
         Column(
           children: [
+            if (width > 600)
+              Row(
+                children: [
+                  BubbleButton(
+                    width: networkSize * 2,
+                    height: 60,
+                    margin: const EdgeInsets.all(5),
+                    onTap: () async {
+                      final Uri url = Uri.parse(
+                        'https://play.google.com/store/apps/details?id=com.seekode.seekode',
+                      );
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url);
+                      }
+                    },
+                    child: Center(
+                      child: SvgPicture.asset(
+                        'assets/images/networks/playstore.svg',
+                        height: 30,
+                      ),
+                    ),
+                  ),
+                  BubbleButton(
+                    width: networkSize * 2,
+                    height: 60,
+                    margin: const EdgeInsets.all(5),
+                    onTap: () async {
+                      final Uri url =
+                          Uri.parse('https://links.seekode.dev/seekode.exe');
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url);
+                      }
+                    },
+                    child: Center(
+                      child: SvgPicture.asset(
+                        'assets/images/networks/windows.svg',
+                        width: 30,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            if (width > 600)
+              const SizedBox(
+                height: 20,
+              ),
             SizedBox(
               width: qrcodeSize,
               height: qrcodeSize,
@@ -62,9 +108,51 @@ class Contact extends StatelessWidget {
                 ],
               ),
             ),
-            if (width > 600)
-              const SizedBox(
-                height: 20,
+            const SizedBox(
+              height: 20,
+            ),
+            if (width <= 600)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  BubbleButton(
+                    width: (width * .7) / 2 - 25,
+                    height: 60,
+                    margin: const EdgeInsets.all(5),
+                    onTap: () async {
+                      final Uri url = Uri.parse(
+                        'https://play.google.com/store/apps/details?id=com.seekode.seekode',
+                      );
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url);
+                      }
+                    },
+                    child: Center(
+                      child: SvgPicture.asset(
+                        'assets/images/networks/playstore.svg',
+                        height: 30,
+                      ),
+                    ),
+                  ),
+                  BubbleButton(
+                    width: (width * .7) / 2 - 25,
+                    height: 60,
+                    margin: const EdgeInsets.all(5),
+                    onTap: () async {
+                      final Uri url =
+                          Uri.parse('https://links.seekode.dev/seekode.exe');
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url);
+                      }
+                    },
+                    child: Center(
+                      child: SvgPicture.asset(
+                        'assets/images/networks/windows.svg',
+                        width: 30,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             if (width > 600)
               Row(
