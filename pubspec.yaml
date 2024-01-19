@@ -42,8 +42,9 @@ flutter:
     - assets/images/logo.svg
     - assets/images/networks/instagram.svg
     - assets/images/networks/tiktok.svg
+    - assets/images/networks/linkedin.svg
+    - assets/images/networks/tiktok.svg
     - assets/images/networks/phone.svg
-    - assets/images/networks/mail.svg
     - assets/images/networks/mail.svg
     - assets/images/networks/playstore.svg
     - assets/images/networks/windows.svg

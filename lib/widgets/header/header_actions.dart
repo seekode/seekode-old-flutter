@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -16,7 +17,7 @@ class HeaderActions extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(
-              height: width * .8 + 60,
+              height: width * .55 + (width * .3) * 0.76125 + 60,
             ),
             Center(
               child: child,
@@ -27,6 +28,7 @@ class HeaderActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
     final double btnWidth = width * .20;
 
     final bool isDesktop = width > 1024;
@@ -48,56 +50,14 @@ class HeaderActions extends StatelessWidget {
       width,
       Padding(
         padding: const EdgeInsets.all(5),
-        child: Flex(
-          direction: isDesktop ? Axis.vertical : Axis.horizontal,
-          mainAxisSize: MainAxisSize.min,
+        child: Column(
           children: [
             Row(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 BubbleButton(
-                  width: networkWidth,
-                  height: networkHeight,
-                  margin: const EdgeInsets.all(5),
-                  onTap: () async {
-                    final Uri url =
-                        Uri.parse('https://www.instagram.com/seekodes');
-                    if (await canLaunchUrl(url)) {
-                      await launchUrl(url);
-                    }
-                  },
-                  child: Center(
-                    child: SvgPicture.asset(
-                      'assets/images/networks/instagram.svg',
-                      width: 40,
-                    ),
-                  ),
-                ),
-                BubbleButton(
-                  width: networkWidth,
-                  height: networkHeight,
-                  margin: const EdgeInsets.all(5),
-                  onTap: () async {
-                    final Uri url =
-                        Uri.parse('https://www.tiktok.com/@seekode');
-                    if (await canLaunchUrl(url)) {
-                      await launchUrl(url);
-                    }
-                  },
-                  child: Center(
-                    child: SvgPicture.asset(
-                      'assets/images/networks/tiktok.svg',
-                      width: 30,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                BubbleButton(
-                  width: networkWidth,
+                  width: isDesktop ? networkWidth : btnWidth * 2 + 10,
                   height: networkHeight,
                   margin: const EdgeInsets.all(5),
                   onTap: () async {
@@ -114,7 +74,7 @@ class HeaderActions extends StatelessWidget {
                   ),
                 ),
                 BubbleButton(
-                  width: networkWidth,
+                  width: isDesktop ? networkWidth : btnWidth * 2 + 10,
                   height: networkHeight,
                   margin: const EdgeInsets.all(5),
                   onTap: () async {
@@ -129,6 +89,94 @@ class HeaderActions extends StatelessWidget {
                       width: 30,
                     ),
                   ),
+                ),
+              ],
+            ),
+            Flex(
+              direction: isDesktop ? Axis.vertical : Axis.horizontal,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    BubbleButton(
+                      width: networkWidth,
+                      height: networkHeight,
+                      margin: const EdgeInsets.all(5),
+                      onTap: () async {
+                        final Uri url =
+                            Uri.parse('https://www.instagram.com/seekodes');
+                        if (await canLaunchUrl(url)) {
+                          await launchUrl(url);
+                        }
+                      },
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/images/networks/instagram.svg',
+                          width: 40,
+                        ),
+                      ),
+                    ),
+                    BubbleButton(
+                      width: networkWidth,
+                      height: networkHeight,
+                      margin: const EdgeInsets.all(5),
+                      onTap: () async {
+                        final Uri url =
+                            Uri.parse('https://www.tiktok.com/@seekode');
+                        if (await canLaunchUrl(url)) {
+                          await launchUrl(url);
+                        }
+                      },
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/images/networks/tiktok.svg',
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    BubbleButton(
+                      width: networkWidth,
+                      height: networkHeight,
+                      margin: const EdgeInsets.all(5),
+                      onTap: () async {
+                        final Uri url = Uri.parse(
+                            'https://www.linkedin.com/in/nicolas-texier-dev/');
+                        if (await canLaunchUrl(url)) {
+                          await launchUrl(url);
+                        }
+                      },
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/images/networks/linkedin.svg',
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                    BubbleButton(
+                      width: networkWidth,
+                      height: networkHeight,
+                      margin: const EdgeInsets.all(5),
+                      onTap: () async {
+                        final Uri url =
+                            Uri.parse('https://youtube.com/@_seekode');
+                        if (await canLaunchUrl(url)) {
+                          await launchUrl(url);
+                        }
+                      },
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/images/trainings/youtube.svg',
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

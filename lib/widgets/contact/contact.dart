@@ -79,7 +79,7 @@ class Contact extends StatelessWidget {
               ),
             if (width > 600)
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
             SizedBox(
               width: qrcodeSize,
@@ -109,7 +109,7 @@ class Contact extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             if (width <= 600)
               Row(
@@ -148,6 +148,46 @@ class Contact extends StatelessWidget {
                     child: Center(
                       child: SvgPicture.asset(
                         'assets/images/networks/windows.svg',
+                        width: 30,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            if (width > 600)
+              Row(
+                children: [
+                  BubbleButton(
+                    width: networkSize * 2 + 10,
+                    height: 60,
+                    margin: const EdgeInsets.all(5),
+                    onTap: () async {
+                      final Uri url = Uri.parse('tel:+33621240684');
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url);
+                      }
+                    },
+                    child: Center(
+                      child: SvgPicture.asset(
+                        'assets/images/networks/phone.svg',
+                        width: 30,
+                      ),
+                    ),
+                  ),
+                  BubbleButton(
+                    width: networkSize * 2 + 10,
+                    height: 60,
+                    margin: const EdgeInsets.all(5),
+                    onTap: () async {
+                      final Uri url =
+                          Uri.parse('mailto:nicolas18.ew@gmail.com');
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url);
+                      }
+                    },
+                    child: Center(
+                      child: SvgPicture.asset(
+                        'assets/images/networks/mail.svg',
                         width: 30,
                       ),
                     ),
@@ -198,14 +238,16 @@ class Contact extends StatelessWidget {
                     height: 60,
                     margin: const EdgeInsets.all(5),
                     onTap: () async {
-                      final Uri url = Uri.parse('tel:+33621240684');
+                      final Uri url = Uri.parse(
+                        'https://www.linkedin.com/in/nicolas-texier-dev/',
+                      );
                       if (await canLaunchUrl(url)) {
                         await launchUrl(url);
                       }
                     },
                     child: Center(
                       child: SvgPicture.asset(
-                        'assets/images/networks/phone.svg',
+                        'assets/images/networks/linkedin.svg',
                         width: 30,
                       ),
                     ),
@@ -216,14 +258,14 @@ class Contact extends StatelessWidget {
                     margin: const EdgeInsets.all(5),
                     onTap: () async {
                       final Uri url =
-                          Uri.parse('mailto:nicolas18.ew@gmail.com');
+                          Uri.parse('https://youtube.com/@_seekode');
                       if (await canLaunchUrl(url)) {
                         await launchUrl(url);
                       }
                     },
                     child: Center(
                       child: SvgPicture.asset(
-                        'assets/images/networks/mail.svg',
+                        'assets/images/trainings/youtube.svg',
                         width: 30,
                       ),
                     ),
@@ -298,14 +340,15 @@ class Contact extends StatelessWidget {
                     height: networkSize,
                     margin: const EdgeInsets.all(5),
                     onTap: () async {
-                      final Uri url = Uri.parse('tel:+33621240684');
+                      final Uri url = Uri.parse(
+                          'https://www.linkedin.com/in/nicolas-texier-dev/');
                       if (await canLaunchUrl(url)) {
                         await launchUrl(url);
                       }
                     },
                     child: Center(
                       child: SvgPicture.asset(
-                        'assets/images/networks/phone.svg',
+                        'assets/images/networks/linkedin.svg',
                         width: 30,
                       ),
                     ),
@@ -316,14 +359,14 @@ class Contact extends StatelessWidget {
                     margin: const EdgeInsets.all(5),
                     onTap: () async {
                       final Uri url =
-                          Uri.parse('mailto:nicolas18.ew@gmail.com');
+                          Uri.parse('https://youtube.com/@_seekode');
                       if (await canLaunchUrl(url)) {
                         await launchUrl(url);
                       }
                     },
                     child: Center(
                       child: SvgPicture.asset(
-                        'assets/images/networks/mail.svg',
+                        'assets/images/trainings/youtube.svg',
                         width: 30,
                       ),
                     ),
@@ -332,6 +375,50 @@ class Contact extends StatelessWidget {
               ),
           ],
         ),
+        if (width <= 600)
+          const SizedBox(
+            height: 30,
+          ),
+        if (width <= 600)
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              BubbleButton(
+                width: width * .5 - 30,
+                height: 60,
+                margin: const EdgeInsets.all(5),
+                onTap: () async {
+                  final Uri url = Uri.parse('tel:+33621240684');
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  }
+                },
+                child: Center(
+                  child: SvgPicture.asset(
+                    'assets/images/networks/phone.svg',
+                    width: 30,
+                  ),
+                ),
+              ),
+              BubbleButton(
+                width: width * .5 - 30,
+                height: 60,
+                margin: const EdgeInsets.all(5),
+                onTap: () async {
+                  final Uri url = Uri.parse('mailto:nicolas18.ew@gmail.com');
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  }
+                },
+                child: Center(
+                  child: SvgPicture.asset(
+                    'assets/images/networks/mail.svg',
+                    width: 30,
+                  ),
+                ),
+              ),
+            ],
+          ),
       ],
     );
   }

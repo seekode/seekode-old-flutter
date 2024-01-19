@@ -30,7 +30,7 @@ class Activity extends StatelessWidget {
           SizedBox(
             height: responsiveValue(
               context,
-              phone: 40,
+              phone: 10,
               desktop: 140,
               large: 180,
             ),

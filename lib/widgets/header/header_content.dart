@@ -80,6 +80,7 @@ class HeaderContent extends StatelessWidget {
                           width:
                               responsiveValue(context, phone: 10, desktop: 30)),
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(

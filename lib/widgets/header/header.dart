@@ -17,7 +17,7 @@ class Header extends StatelessWidget {
       width: double.infinity,
       height: responsiveValue(
         context,
-        phone: width * .85 + 135,
+        phone: width * .85 + 220,
         desktop: width * .54,
         bigger: {2500: 1325.53},
       ),
