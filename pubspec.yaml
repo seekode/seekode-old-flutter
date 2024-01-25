@@ -63,6 +63,13 @@ flutter:
     - assets/images/trainings/seekorp.svg
     - assets/images/trainings/youtube.svg
     - assets/images/trainings/discord.svg
+    - assets/images/projects/seekode.png
+    - assets/images/projects/formawave.png
+    - assets/images/projects/capters.png
+    - assets/images/projects/ec-controlling.png
+    - assets/images/projects/tennisvexin-thelle.png
+    - assets/images/projects/desmarez.png
+    - assets/images/projects/sophrologue.png
     - assets/images/about/seekode.jpg
     - assets/images/about/microsoft_teams.svg
     - assets/images/about/responsive.svg

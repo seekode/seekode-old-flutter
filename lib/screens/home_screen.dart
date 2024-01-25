@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:seekode/widgets/projects/projects.dart';
 
 import '../app_themes.dart';
 import '../providers/language/language.dart';
@@ -373,6 +374,8 @@ class Content extends StatelessWidget {
               Container(key: _servicesKey, child: const Services()),
               const SizedBox(height: 100),
               Container(key: _trainingsKey, child: const Trainings()),
+              const SizedBox(height: 100),
+              const Projects(),
               const SizedBox(height: 100),
               const About(),
               SizedBox(

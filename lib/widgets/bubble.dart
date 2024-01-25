@@ -9,6 +9,7 @@ class Bubble extends StatelessWidget {
     this.margin,
     this.padding,
     this.customColor,
+    this.secondeCustomColor,
     this.borderRadius,
     this.lightShadow,
     this.child,
@@ -20,6 +21,7 @@ class Bubble extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
   final EdgeInsetsGeometry? padding;
   final Color? customColor;
+  final Color? secondeCustomColor;
   final BorderRadiusGeometry? borderRadius;
   final BoxShadow? lightShadow;
   final Widget? child;
@@ -40,11 +42,12 @@ class Bubble extends StatelessWidget {
           end: Alignment.bottomRight,
           colors: [
             brightness == Brightness.dark
-                ? const Color.fromARGB(255, 45, 45, 45)
+                ? secondeCustomColor ?? const Color.fromARGB(255, 45, 45, 45)
                 : customColor ?? Theme.of(context).colorScheme.background,
             brightness == Brightness.dark
                 ? customColor ?? Theme.of(context).colorScheme.background
-                : const Color.fromARGB(255, 235, 235, 235),
+                : secondeCustomColor ??
+                    const Color.fromARGB(255, 235, 235, 235),
           ],
         ),
         boxShadow: [

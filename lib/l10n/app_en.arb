@@ -62,5 +62,22 @@
   "trainingsSeeLearn": "SeeLearn is my beginner-accessible training platform for learning programming on various technologies.",
   "trainingsYouTube": "I offer, on my Youtube channel free training allowing developers of all levels to train on various technologies.",
   "website": "website",
-  "welcome": "Welcome to seekode App !"
+  "welcome": "Welcome to seekode App !",
+  "myProjects": "My projects",
+  "expSubtitleSeekode": "Front-End Developer",
+  "expDescriptionSeekode": "After having kept the same website for a long time which was modern and sober but a bit \"classic\", I wanted to completely redo my personal website with a more creative approach in order to give it a new look and make it stand out more easily.",
+  "expSubtitleFormawave": "Full-Stack Trainer",
+  "expDescriptionFormawave": "Since December 2021, in addition to my usual clients, I have been working in collaboration with Formawave, an agency that regularly calls on me for missions as a trainer for beginner to advanced levels.",
+  "expSubtitleCapters": "Full-Stack Developer",
+  "expDescriptionCapters": "As part of a mobile app called Capters, I was first asked to create a full admin interface. \n\nFollowing the customer's satisfaction, he contacted me again to fix bugs, performance issues and design new features on his mobile applications.",
+  "expSubtitleCaptersAdmin": "Full-Stack Developer",
+  "expDescriptionSCaptersAdmin": "As part of a mobile app called Capters, I helped my client by creating a full admin interface allowing them to moderate their apps.\n\nOnce the admin interface was finished, I was in charge of maintenance, and updates adding various features for more than a year.",
+  "expSubtitleControlling": "Full-Stack Developer",
+  "expDescriptionControlling": "I helped a freelance client improve the design and SEO of her website in order to boost her freelancing activities and allow her to get more clients.\n\nI also gave him a lot of advice on how to improve his web presence.",
+  "expSubtitleTennisVexinThelle": "Full-Stack Trainer/Developer",
+  "expDescriptionTennisVexinThelle": "As part of a training course, a learner had to create a website for his tennis club.\n\nI coached, advised and helped this learner to design his website himself and to be able to make others afterwards.",
+  "expSubtitleDesmarez": "Front-End Developer",
+  "expDescriptionDesmarez": "As part of an internship at DESMAREZ (2 internships of 1 month) I had the opportunity to briefly rub shoulders with the C++ language but above all I was in charge of producing an Android application capable of geolocating posts in real time.",
+  "expSubtitleSophrologie": "Front-End Developer",
+  "expDescriptionSophrologie": "A client working in the field of sophrology as a freelancer contacted me in order to improve her web presence with a website, all for a reduced cost. \nSo I offered him a 100% customized solution that fit within his budget."
 }

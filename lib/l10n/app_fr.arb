@@ -1,4 +1,7 @@
 {
+  "@language": {
+    "description": "The language of the application"
+  },
   "aboutInfo": "Je suis un développeur indépendant passionné par le code depuis plus de 7 ans. J'ai acquis une solide expertise dans plusieurs langages de programmation, et j'ai développé une passion pour la création d'applications, site web, logiciel, et autres programmes en tous genres. \nDepuis maintenant plus de 3 ans j'ai également développer un interet particulier pour l'activité de formateur que je prend beaucoup de plaisir à exercer.",
   "aboutMe": "A propos",
   "activityDevelopment": "Profitez de mon expérience pour vous aider dans la gestion et le développement de votre projet. \nSite web, application mobile, logiciel, ou encore formation, je propose des services de haute qualité qui seront vous satisfaire.",
@@ -59,5 +62,22 @@
   "trainingsSeeLearn": "SeeLearn est ma plate-forme de formation accessible aux débutant permettant l’apprentissage de la programmation sur diverses technologies.",
   "trainingsYouTube": "Je propose, sur ma chaine Youtube des formations gratuite permettant à des développeurs de tout niveau de se former sur diverses technologies. ",
   "website": "site web",
-  "welcome": "Bienvenue sur l'application seekode !"
+  "welcome": "Bienvenue sur l'application seekode !",
+  "myProjects": "Mes projets",
+  "expSubtitleSeekode": "Développeur Front-End",
+  "expDescriptionSeekode": "Après avoir longtemps gardé le même site web qui était moderne et sobre mais un peut \"classique\", j'ai voulu refaire entièrement mon site web personnel avec une approche plus créative afin de lui redonner un coup de neuf et qu'il se démarque plus facilement.",
+  "expSubtitleFormawave": "Formateur Full-Stack",
+  "expDescriptionFormawave": "Depuis décembre 2021, en plus de mes clients habituels, je travaille en collaboration avec Formawave, une agence qui fait régulièrement appel à moi pour des missions en tant que formateur pour des niveaux débutant à avancé.",
+  "expSubtitleCapters": "Développeur Full-Stack",
+  "expDescriptionCapters": "Dans le cadre d'une application mobile appelée Capters, j'ai d'abord été demandé pour créer une interface administrateur complète. \n\nSuite à la satisfaction du client, il m'a recontacté pour résoudre des bugs, des problèmes de performance et concevoir de nouvelles fonctionnalités sur ses applications mobiles.",
+  "expSubtitleCaptersAdmin": "Développeur Full-Stack",
+  "expDescriptionSCaptersAdmin": "Dans le cadre d'une application mobile appelée Capters, j'ai aidé mon client en créant une interface administrateur complète lui permettant de modérer ses applications.\n\nUne fois l'interface administrateur finit, j'etais en charge de la maintenance, et des mises a jours ajoutant diverses fonctionnalités pendant plus d'un ans.",
+  "expSubtitleControlling": "Développeur Full-Stack",
+  "expDescriptionControlling": "J'ai aidé une cliente freelance à améliorer le design et le référencement de son site web afin de booster ses activités de freelance et lui permettre d'obtenir plus de clients.\n\nJe lui ai également apporté de nombreux conseils pour améliorer sa présence sur le Web.",
+  "expSubtitleTennisVexinThelle": "Formateur/Développeur Full-Stack",
+  "expDescriptionTennisVexinThelle": "Dans le cadre d'une formation, un apprenant devait réaliser un site Web pour son club de tennis.\n\nJ'ai coaché, conseillé et aidé cet apprenant pour concevoir son site web lui-même et pouvoir en faire d'autres par la suite.",
+  "expSubtitleDesmarez": "Développeur Front-End",
+  "expDescriptionDesmarez": "Dans le cadre d'un stage effectuer à DESMAREZ (2 stage de 1 mois) j'ai eu l'occasion de côtoyer brièvement le langage C++ mais surtout j'ai été charger de produire une applications Android capable de géolocaliser les posts en temps réel.",
+  "expSubtitleSophrologie": "Développeur Front-End",
+  "expDescriptionSophrologie": "Une cliente travaillant dans le domaine de la sophrologie en freelance m'a contacté afin d'améliorer sa présence sur le web avec un site web, le tous pour un cout réduit. \nJe lui ai donc proposé une solution 100% customisée qui rentrait dans son budget."
 }
