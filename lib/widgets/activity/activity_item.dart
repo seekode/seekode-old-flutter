@@ -54,7 +54,13 @@ class ActivityItem extends StatelessWidget {
                       ),
                       const SizedBox(height: 40),
                     ],
-                    Text(_description, softWrap: true),
+                    Text(
+                      _description,
+                      softWrap: true,
+                      style: screenWidth > 600
+                          ? theme.textTheme.bodyLarge
+                          : theme.textTheme.bodyMedium,
+                    ),
                     const SizedBox(height: 15),
                     GradientTextButton(
                       AppLocalizations.of(context)!.discover,

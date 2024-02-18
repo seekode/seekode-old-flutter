@@ -96,7 +96,7 @@ class ProjectItem extends ConsumerWidget {
       onTap: () => displayProject(context),
       child: Bubble(
         width: width,
-        margin: const EdgeInsets.all(10),
+        margin: const EdgeInsets.all(7),
         child: Column(
           children: [
             Container(
@@ -116,14 +116,18 @@ class ProjectItem extends ConsumerWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
                       title,
-                      style: theme.textTheme.titleSmall!.copyWith(fontSize: 15),
+                      style: theme.textTheme.titleSmall!.copyWith(
+                        fontSize:
+                            responsiveValue(context, phone: 15, tablet: 20),
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -133,7 +137,10 @@ class ProjectItem extends ConsumerWidget {
                     alignment: Alignment.bottomRight,
                     child: Text(
                       subtitle,
-                      style: theme.textTheme.bodySmall!.copyWith(fontSize: 10),
+                      style: theme.textTheme.bodySmall!.copyWith(
+                        fontSize:
+                            responsiveValue(context, phone: 9, tablet: 12),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -205,17 +212,26 @@ class _ProjectContentState extends State<ProjectContent> {
                 ),
                 Center(
                   child: Bubble(
-                    width: width - 80,
-                    height: (width - 80) / (16 / 9),
-                    constraints:
-                        const BoxConstraints(maxWidth: 1200, maxHeight: 650),
+                    constraints: BoxConstraints(
+                      maxWidth: width - 80,
+                      maxHeight: MediaQuery.of(context).orientation ==
+                              Orientation.portrait
+                          ? 650
+                          : MediaQuery.of(context).size.height * .5,
+                    ),
                     margin: const EdgeInsets.symmetric(vertical: 40),
-                    child: ClipRRect(
-                      borderRadius: const BorderRadius.all(Radius.circular(23)),
-                      child: Image.asset(
-                        'assets/images/projects/${widget.img}',
-                        fit: BoxFit.cover,
-                        alignment: Alignment.topCenter,
+                    child: AspectRatio(
+                      aspectRatio: 16 / 9,
+                      child: Container(
+                        child: ClipRRect(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(23)),
+                          child: Image.asset(
+                            'assets/images/projects/${widget.img}',
+                            fit: BoxFit.cover,
+                            alignment: Alignment.topCenter,
+                          ),
+                        ),
                       ),
                     ),
                   ),

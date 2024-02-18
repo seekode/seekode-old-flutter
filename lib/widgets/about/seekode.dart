@@ -109,7 +109,6 @@ class Seekode extends StatelessWidget {
           constraints: const BoxConstraints(maxWidth: 600),
           child: Text(
             AppLocalizations.of(context)!.aboutInfo,
-            style: theme.textTheme.bodySmall,
           ),
         ),
         const SizedBox(height: 30),

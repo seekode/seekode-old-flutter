@@ -81,14 +81,14 @@ class Tech extends StatelessWidget {
       ),
       null,
       TechItem(
-        'nuxtjs',
-        AppLocalizations.of(context)!.techNuxtjs,
-        'https://v2.nuxt.com/${localNameFr ? 'fr' : ''}',
+        'react-native',
+        AppLocalizations.of(context)!.techReactNative,
+        'https://reactnative.dev/',
       ),
       TechItem(
-        'vuejs',
-        AppLocalizations.of(context)!.techVuejs,
-        'https://${localNameFr ? 'fr.' : ''}vuejs.org/',
+        'react',
+        AppLocalizations.of(context)!.techReact,
+        'https://${localNameFr ? 'fr.' : ''}react.dev/',
       ),
       TechItem(
         'javascript',
@@ -109,13 +109,13 @@ class Tech extends StatelessWidget {
       ),
       null,
       TechItem(
-        size.width < 384 ? 'nuxtjs' : 'npm',
+        size.width < 384 ? 'react-native' : 'wordpress',
         size.width < 384
-            ? AppLocalizations.of(context)!.techNuxtjs
-            : AppLocalizations.of(context)!.techNpm,
+            ? AppLocalizations.of(context)!.techReactNative
+            : AppLocalizations.of(context)!.techWordpress,
         size.width < 384
-            ? 'https://v2.nuxt.com/${localNameFr ? 'fr' : ''}'
-            : 'https://www.npmjs.com/',
+            ? 'https://reactnative.dev/'
+            : 'https://wordpress.com/${localNameFr ? 'fr/' : ''}',
       ),
       TechItem(
         'nodejs',
@@ -132,7 +132,13 @@ class Tech extends StatelessWidget {
         AppLocalizations.of(context)!.techDart,
         'https://dart.dev/',
       ),
-      null,
+      size.width < 384
+          ? TechItem(
+              'wordpress',
+              AppLocalizations.of(context)!.techWordpress,
+              'https://wordpress.com/${localNameFr ? 'fr/' : ''}',
+            )
+          : null,
       null,
       null,
       null,
@@ -309,6 +315,7 @@ class Tech extends StatelessWidget {
 
 class TechItem {
   TechItem(this.tag, this.text, this.doc);
+
   String tag;
   String text;
   String doc;

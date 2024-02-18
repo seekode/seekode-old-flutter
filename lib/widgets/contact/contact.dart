@@ -17,9 +17,9 @@ class Contact extends StatelessWidget {
       context,
       phone: width * 0.7,
       tablet: width * 0.45,
-      desktop: width * 0.4,
+      desktop: width * 0.3,
       bigger: {
-        1200: 480,
+        1200: 400,
       },
     );
 
@@ -292,7 +292,7 @@ class Contact extends StatelessWidget {
                 phone: width * 0.4,
                 tablet: width * 0.35,
               ),
-              constraints: const BoxConstraints(maxWidth: 420),
+              constraints: const BoxConstraints(maxWidth: 300),
               child: Image.asset('assets/images/networks/phone.png'),
             ),
             if (width < 601) const SizedBox(width: 20),

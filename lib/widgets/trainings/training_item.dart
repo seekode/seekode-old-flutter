@@ -77,7 +77,6 @@ class TrainingItem extends ConsumerWidget {
                 const SizedBox(height: 5),
                 Text(
                   description,
-                  style: theme.textTheme.bodySmall,
                 ),
                 const SizedBox(height: 10),
                 Padding(

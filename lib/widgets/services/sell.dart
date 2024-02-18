@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:seekode/widgets/services/sell_content.dart';
 
 import '../../app_themes.dart';
 import '../bubble.dart';
@@ -20,7 +21,7 @@ class Sell extends StatefulWidget {
 }
 
 class _SellState extends State<Sell> with SingleTickerProviderStateMixin {
-  int activeItem = 0;
+  int activeItem = 1;
   int? previousItem;
 
   late AnimationController _controller;
@@ -237,6 +238,7 @@ class _SellState extends State<Sell> with SingleTickerProviderStateMixin {
             );
           }),
         ),
+        SellContent(activeItem),
       ],
     );
   }

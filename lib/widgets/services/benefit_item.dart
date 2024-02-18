@@ -58,7 +58,7 @@ class BenefitItem extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .titleSmall!
-                          .copyWith(fontSize: 12.5),
+                          .copyWith(fontSize: 13.5),
                     ),
                     const SizedBox(
                       height: 10,
@@ -66,7 +66,7 @@ class BenefitItem extends StatelessWidget {
                     Text(
                       description,
                       style: const TextStyle(
-                        fontSize: 11,
+                        fontSize: 12,
                       ),
                     ),
                   ],

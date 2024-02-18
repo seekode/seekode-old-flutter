@@ -40,6 +40,7 @@ flutter:
     - assets/images/flags/fr.svg
     - assets/images/flags/en.svg
     - assets/images/logo.svg
+    - assets/images/logo-text.svg
     - assets/images/networks/instagram.svg
     - assets/images/networks/tiktok.svg
     - assets/images/networks/linkedin.svg
@@ -61,6 +62,7 @@ flutter:
     - assets/images/services/support.png
     - assets/images/services/handshake.png
     - assets/images/trainings/seekorp.svg
+    - assets/images/trainings/udemy.svg
     - assets/images/trainings/youtube.svg
     - assets/images/trainings/discord.svg
     - assets/images/projects/seekode.png
@@ -81,12 +83,12 @@ flutter:
     - assets/images/about/sass.svg
     - assets/images/about/css.svg
     - assets/images/about/filezilla.svg
-    - assets/images/about/nuxtjs.svg
-    - assets/images/about/vuejs.svg
+    - assets/images/about/react-native.svg
+    - assets/images/about/react.svg
     - assets/images/about/javascript.svg
     - assets/images/about/vscode.svg
     - assets/images/about/android_studio.svg
-    - assets/images/about/npm.svg
+    - assets/images/about/wordpress.svg
     - assets/images/about/nodejs.svg
     - assets/images/about/php.svg
     - assets/images/about/dart.svg

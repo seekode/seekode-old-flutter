@@ -14,7 +14,20 @@ class BubbleButton extends StatefulWidget {
     this.borderRadius,
     this.lightShadow,
     this.child,
-  });
+  }) : _defaultSquare = true;
+
+  const BubbleButton.notDefaultSquare({
+    super.key,
+    this.onTap,
+    this.width,
+    this.height,
+    this.constraints,
+    this.margin,
+    this.padding,
+    this.borderRadius,
+    this.lightShadow,
+    this.child,
+  }) : _defaultSquare = false;
 
   final Function()? onTap;
   final double? width;
@@ -25,6 +38,8 @@ class BubbleButton extends StatefulWidget {
   final BorderRadiusGeometry? borderRadius;
   final BoxShadow? lightShadow;
   final Widget? child;
+
+  final bool _defaultSquare;
 
   @override
   State<BubbleButton> createState() => _BubbleButtonState();
@@ -61,8 +76,8 @@ class _BubbleButtonState extends State<BubbleButton> {
             }
           },
           child: Bubble(
-            width: widget.width ?? 70,
-            height: widget.height ?? 70,
+            width: !widget._defaultSquare ? null : widget.width ?? 70,
+            height: !widget._defaultSquare ? null : widget.height ?? 70,
             constraints: widget.constraints,
             padding: widget.padding,
             borderRadius: widget.borderRadius,

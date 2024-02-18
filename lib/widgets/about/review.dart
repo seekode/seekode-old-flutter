@@ -125,7 +125,6 @@ class ReviewItem extends StatelessWidget {
         const SizedBox(height: 10),
         Text(
           text,
-          style: theme.bodySmall,
         ),
         const SizedBox(height: 5),
         Row(

@@ -45,7 +45,7 @@ class Activity extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: width > 720 ? 0 : 20,
+            height: width > 720 ? 10 : 20,
           ),
           ActivityItem(
             AppLocalizations.of(context)!.trainings,
