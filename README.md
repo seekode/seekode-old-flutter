@@ -53,13 +53,11 @@ Les Technologies que je maîtrise le plus :
 ![Javascript](https://img.shields.io/badge/Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&labelColor=black&logo=html5&logoColor=E34F26)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&labelColor=black&logo=css3&logoColor=1572B6)
-![CSS3](https://img.shields.io/badge/PHP-7a86b8?style=for-the-badge&labelColor=black&logo=php&logoColor=7a86b8)
-![CSS3](https://img.shields.io/badge/Firebase-ffcd02?style=for-the-badge&labelColor=black&logo=firebase&logoColor=ffcd02)
-![CSS3](https://img.shields.io/badge/MySQL-dd8a00?style=for-the-badge&labelColor=black&logo=mysql&logoColor=dd8a00)
-![CSS3](https://img.shields.io/badge/wordpress-1e8cbe?style=for-the-badge&labelColor=black&logo=wordpress&logoColor=1e8cbe)
-![CSS3](https://img.shields.io/badge/Figma-9456ea?style=for-the-badge&labelColor=black&logo=figma&logoColor=9456ea)
-![CSS3](https://img.shields.io/badge/VS_code-1f9cf0?style=for-the-badge&labelColor=black&logo=visualstudiocode&logoColor=1f9cf0)
-![CSS3](https://img.shields.io/badge/Android_studio-3DDC84?style=for-the-badge&labelColor=black&logo=androidstudio&logoColor=3DDC84)
+![PHP](https://img.shields.io/badge/PHP-7a86b8?style=for-the-badge&labelColor=black&logo=php&logoColor=7a86b8)
+![Firebase](https://img.shields.io/badge/Firebase-ffcd02?style=for-the-badge&labelColor=black&logo=firebase&logoColor=ffcd02)
+![MySQL](https://img.shields.io/badge/MySQL-dd8a00?style=for-the-badge&labelColor=black&logo=mysql&logoColor=dd8a00)
+![Wordpress](https://img.shields.io/badge/wordpress-1e8cbe?style=for-the-badge&labelColor=black&logo=wordpress&logoColor=1e8cbe)
+![Figma](https://img.shields.io/badge/Figma-9456ea?style=for-the-badge&labelColor=black&logo=figma&logoColor=9456ea)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&labelColor=black&logo=git&logoColor=F05032)
 
 <br>
