@@ -97,7 +97,7 @@ class Seekode extends StatelessWidget {
                   tablet: 40,
                 )),
                 Text(
-                  '7 ans d\'expériences',
+                  '${DateTime.now().year - 2015} ${AppLocalizations.of(context)!.headerExperiences}',
                   style: theme.textTheme.bodyMedium,
                 ),
               ],

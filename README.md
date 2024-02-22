@@ -1,16 +1,27 @@
-# seekode
+# seekode | Nicolas Texier
 
-Seekode personal website.
+![logo](https://raw.githubusercontent.com/seekode/seekode/master/assets/images/logo-text.png)
 
-## Getting Started
+🎯J'aide les professionnels à booster leur rentabilité, leur visibilité et leur productivité avec des
+applications web🌐, mobiles📱 et/ou bureautiques💻.
 
-This project is a starting point for a Flutter application.
+❓Pourquoi moi ? Depuis 2020, je m'efforce de me spécialisé dans des technologies qui demandent un
+faible investissement tous en ayant des performances haut de gamme.
 
-A few resources to get you started if this is your first Flutter project:
+🫱🏻‍🫲🏽 Je mise tout sur la transparence, avec moi, vous serez l'investissement que demande chaque
+fonctionnalité de facons a faire le trie pour trouver l'équilibre parfait entre performance et
+investissement.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+💡Réseau social, e-commerce, nouveaux concepts, …. Je peux également vous accompagner dans votre
+projet web, mobile et/ou bureautique de A à Z afin de donner vie à vos idées.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🧑‍🎓Je propose également du coaching personnalisé afin de vous aider à apprendre le développement web
+et/ou mobile / bureautique. Il y aura bientôt des formations complètes disponibles sur mon site web.
+
+## Contact
+
+📩 Mail : nicolas18.ew@gmail.com
+
+📞 Numéro : 06 21 24 06 84
+
+🌐 Site web : https://seekode.dev

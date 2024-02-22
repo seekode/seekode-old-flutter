@@ -230,7 +230,7 @@ class SellContentItem extends ConsumerWidget {
             {
               'text': 'Udemy',
               'logo': 'assets/images/trainings/udemy.svg',
-              'link': 'https://www.udemy.com/fr/',
+              'link': 'https://www.udemy.com/user/nicolas-1116/',
             },
           ]
         },
@@ -380,8 +380,6 @@ class SellContentItem extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: items[_index].map((e) {
-        final ContentType type = e['type'] as ContentType;
-
         switch (e['type'] as ContentType) {
           case ContentType.title:
             return displayTitle(e['content'], theme);
