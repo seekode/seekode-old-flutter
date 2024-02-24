@@ -108,7 +108,7 @@ class Seekode extends StatelessWidget {
         Container(
           constraints: const BoxConstraints(maxWidth: 600),
           child: Text(
-            AppLocalizations.of(context)!.aboutInfo,
+            '${AppLocalizations.of(context)!.aboutInfo1} ${DateTime.now().year - 2015} ${AppLocalizations.of(context)!.aboutInfo2}',
           ),
         ),
         const SizedBox(height: 30),

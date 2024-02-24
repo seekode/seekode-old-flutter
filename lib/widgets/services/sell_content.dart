@@ -97,7 +97,7 @@ class _SellContentState extends State<SellContent>
               child: Container(
                 width: double.infinity,
                 color: brightness == Brightness.light
-                    ? const Color.fromARGB(190, 255, 255, 255)
+                    ? const Color.fromARGB(200, 255, 255, 255)
                     : const Color.fromARGB(116, 41, 38, 42),
                 child: AnimatedSize(
                   duration: const Duration(milliseconds: 300),
@@ -322,7 +322,11 @@ class SellContentItem extends ConsumerWidget {
           'content': AppLocalizations.of(context)!.sellContentProject3,
         },
         {
-          'type': ContentType.title,
+          'type': ContentType.text,
+          'content': AppLocalizations.of(context)!.sellContentProject4,
+        },
+        {
+          'type': ContentType.text,
           'content': AppLocalizations.of(context)!.sellContentProject5,
         },
         {
@@ -330,8 +334,12 @@ class SellContentItem extends ConsumerWidget {
           'content': AppLocalizations.of(context)!.sellContentProject6,
         },
         {
+          'type': ContentType.title,
+          'content': AppLocalizations.of(context)!.sellContentProject7,
+        },
+        {
           'type': ContentType.text,
-          'content': AppLocalizations.of(context)!.sellContentProject4,
+          'content': AppLocalizations.of(context)!.sellContentProject8,
         },
         {
           'type': ContentType.actions,
