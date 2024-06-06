@@ -99,4 +99,4 @@ et/ou mobile / bureautique. Il y aura bientôt des formations complètes disponi
 🌐 Site web : https://seekode.dev
 
 # LICENSE
-[MIT LICENSE](https://github.com/seekode/seekode-vsc-theme/blob/master/LICENSE)
+[MIT LICENSE](https://github.com/seekode/seekode/blob/master/LICENSE)
