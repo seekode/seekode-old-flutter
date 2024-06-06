@@ -97,3 +97,6 @@ et/ou mobile / bureautique. Il y aura bientôt des formations complètes disponi
 📞 Numéro : 06 21 24 06 84
 
 🌐 Site web : https://seekode.dev
+
+# LICENSE
+[MIT LICENSE](https://github.com/seekode/seekode-vsc-theme/blob/master/LICENSE)
