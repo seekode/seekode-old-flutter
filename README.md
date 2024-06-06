@@ -50,15 +50,18 @@ Les Technologies que je maîtrise le plus :
 
 ![Flutter](https://img.shields.io/badge/Flutter-45d1fd?style=for-the-badge&labelColor=black&logo=flutter&logoColor=45d1fd)
 ![Dart](https://img.shields.io/badge/Dart-04599c?style=for-the-badge&labelColor=black&logo=dart&logoColor=04599c)
-![Javascript](https://img.shields.io/badge/Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&labelColor=black&logo=html5&logoColor=E34F26)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&labelColor=black&logo=css3&logoColor=1572B6)
+![Javascript](https://img.shields.io/badge/Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)
+![TypeScript](https://img.shields.io/badge/TypeScript-2f74c0?style=for-the-badge&logo=typescript&logoColor=2f74c0&labelColor=black)
+![Vue Js](https://img.shields.io/badge/Vue%20js-3fb27f?style=for-the-badge&logo=vue.js&logoColor=3fb27f&labelColor=black)
+![Node js](https://img.shields.io/badge/Node%20js-87b87a?style=for-the-badge&logo=node.js&logoColor=87b87a&labelColor=black)
+![Bun](https://img.shields.io/badge/Bun-ebdfcd?style=for-the-badge&logo=bun&logoColor=ebdfcd&labelColor=black)
 ![PHP](https://img.shields.io/badge/PHP-7a86b8?style=for-the-badge&labelColor=black&logo=php&logoColor=7a86b8)
 ![Firebase](https://img.shields.io/badge/Firebase-ffcd02?style=for-the-badge&labelColor=black&logo=firebase&logoColor=ffcd02)
+![Mongo DB](https://img.shields.io/badge/Mongo%20db-4cab3d?style=for-the-badge&logo=mongodb&logoColor=4cab3d&labelColor=black)
 ![MySQL](https://img.shields.io/badge/MySQL-dd8a00?style=for-the-badge&labelColor=black&logo=mysql&logoColor=dd8a00)
-![Wordpress](https://img.shields.io/badge/wordpress-1e8cbe?style=for-the-badge&labelColor=black&logo=wordpress&logoColor=1e8cbe)
 ![Figma](https://img.shields.io/badge/Figma-9456ea?style=for-the-badge&labelColor=black&logo=figma&logoColor=9456ea)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&labelColor=black&logo=git&logoColor=F05032)
 
 <br>
 <br>
