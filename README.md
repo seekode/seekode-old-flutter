@@ -2,7 +2,7 @@
 
 <h3 align="center">
 
-![logo](https://raw.githubusercontent.com/seekode/seekode/master/assets/images/logo-text.png)
+![logo](https://raw.githubusercontent.com/seekode/seekode-old-flutter/master/assets/images/logo-text.png)
 
 <samp>&gt; Salut, Je suis
 <b><a target="_blank" href="https://seekode.dev/">Nicolas Texier | seekode</a></b>
@@ -34,9 +34,11 @@
  </a>
 </div>
 
+<p align="center">Ceci est une ancienne version de mon site web, avec mon ancienne DA</p>
+
 # Présentation
 
-<img align="left" width="350" src="https://raw.githubusercontent.com/seekode/seekode/master/assets/images/header.png" alt="code" />
+<img align="left" width="350" src="https://raw.githubusercontent.com/seekode/seekode-old-flutter/master/assets/images/header.png" alt="code" />
 
 Je suis un développeur indépendant passionné par le code depuis 2015. J'ai acquis
 une solide expertise dans plusieurs langages de programmation, et j'ai développé une
@@ -69,7 +71,7 @@ Les Technologies que je maîtrise le plus :
 
 # Mes services
 
-<img align="right" width="350" src="https://raw.githubusercontent.com/seekode/seekode/master/assets/images/networks/phone.png" alt="phone" />
+<img align="right" width="350" src="https://raw.githubusercontent.com/seekode/seekode-old-flutter/master/assets/images/networks/phone.png" alt="phone" />
 
 <br>
 <br>
@@ -99,4 +101,4 @@ et/ou mobile / bureautique. Il y aura bientôt des formations complètes disponi
 🌐 Site web : https://seekode.dev
 
 # LICENSE
-[MIT LICENSE](https://github.com/seekode/seekode/blob/master/LICENSE)
+[MIT LICENSE](https://github.com/seekode/seekode-old-flutter/blob/master/LICENSE)
